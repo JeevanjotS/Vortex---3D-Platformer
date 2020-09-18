@@ -43,16 +43,29 @@ public class PlayerController : MonoBehaviour
             {
                 gameObject.GetComponent<PlayerJump>().enabled = false;
                 gameObject.layer = LayerMask.NameToLayer("Phasable");
+                
+                // 0 - Default Layer
+                // 4 - Water Layer  
+                Physics.IgnoreLayerCollision(0, 4, true);
             }
             else if(rend.material.name.Replace(" (Instance)", "") == "Jumping")
             {
                 gameObject.GetComponent<PlayerJump>().enabled = true;
                 gameObject.layer = LayerMask.NameToLayer("Default");
+                Physics.IgnoreLayerCollision(0, 4, true);
+            }
+            else if(rend.material.name.Replace(" (Instance)", "") == "Freezing")
+            {
+                print(" Picked Up Freezing ");
+                gameObject.GetComponent<PlayerJump>().enabled = false;
+                gameObject.layer = LayerMask.NameToLayer("Default");
+                Physics.IgnoreLayerCollision(0, 4, false);
             }
             else
             {
                 gameObject.GetComponent<PlayerJump>().enabled = false;
                 gameObject.layer = LayerMask.NameToLayer("Default");
+                Physics.IgnoreLayerCollision(0, 4, true);
             }
         }
         else if(c.gameObject.CompareTag("EndFlag"))
