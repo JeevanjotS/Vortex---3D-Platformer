@@ -26,7 +26,7 @@ public class PlayerJump : MonoBehaviour
         var kb = Keyboard.current;
         if (kb.spaceKey.isPressed)
         {
-            if(Physics.Raycast(transform.position, - Vector3.up, (float)(distanceToGround + 0.1f)))
+            if(Physics.Raycast(transform.position, - Vector3.up, (float)(distanceToGround)))
             {
                 rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);   
             }

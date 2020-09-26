@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 0;
+    public float forward_speed = 0;
+    public float rotate_speed = 0;
     private Rigidbody rb;
     private float movementX;
     private float movementY;
@@ -19,7 +20,6 @@ public class PlayerController : MonoBehaviour
         winText.SetActive(false);
     }
 
-
     void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
@@ -30,7 +30,9 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        rb.AddForce(movement * speed);
+        // rb.AddForce(movement * forward_speed);
+        rb.AddForce(transform.forward * movementY * forward_speed);
+        transform.Rotate(0,movementX * rotate_speed,0);
     }
 
     private void OnTriggerEnter(Collider c)
