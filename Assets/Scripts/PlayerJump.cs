@@ -24,7 +24,7 @@ public class PlayerJump : MonoBehaviour
     {
         // print(this.name);
         var kb = Keyboard.current;
-        if (kb.spaceKey.isPressed)
+        if (kb.spaceKey.wasPressedThisFrame)
         {
             if(Physics.Raycast(transform.position, - Vector3.up, (float)(distanceToGround)))
             {

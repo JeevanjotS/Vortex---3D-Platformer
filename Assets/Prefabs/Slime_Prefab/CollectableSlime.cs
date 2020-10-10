@@ -11,7 +11,7 @@ public class CollectableSlime : MonoBehaviour
         print("Here");
         if (c.attachedRigidbody)
         {   
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }

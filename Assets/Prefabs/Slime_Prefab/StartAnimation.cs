@@ -5,7 +5,7 @@ using UnityEngine;
 public class StartAnimation : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int s = 10;
+    //private int s = 10;
     public GameObject UVSlimePickUp;
     private GameObject RotatingParent;
     private bool b;
@@ -41,11 +41,11 @@ public class StartAnimation : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider c)
-    {
-        foreach (Animator anim in anims ) 
-        {
-            anim.SetBool ( "AnimationOn", false);        
-        }
-    }
+    //void OnTriggerExit(Collider c)
+    //{
+    //    foreach (Animator anim in anims ) 
+    //    {
+    //        anim.SetBool ( "AnimationOn", false);        
+    //    }
+    //}
 }
