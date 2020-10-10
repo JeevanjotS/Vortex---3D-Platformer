@@ -16,9 +16,12 @@ public class PlayerController : MonoBehaviour
     private float default_rotate_speed = 0;
 
     private Material collided_material;
+    private Countdown_timer countdown_Timer;
 
     public Material[] Squee_materials;
     public Material[] PowerUp_materials;
+
+    public GameObject textBox;
 
     //Dictonary of format { Power_Up_Material : Character_Material}
     private Dictionary<Material, Material> Material_Dictionary = new Dictionary<Material, Material>();
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         // rend = GetComponent<Renderer>();
         rend = gameObject.transform.GetChild(0).GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>();
+        countdown_Timer = textBox.GetComponent<Countdown_timer>();
         winText.SetActive(false);
         default_forward_speed = forward_speed;
         default_rotate_speed = rotate_speed;
@@ -68,6 +72,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider c)
     {
+        if (c.gameObject.name == "RotatingParent"){
+            countdown_Timer.addToTimer(10);
+        }
         if (c.gameObject.CompareTag("Pickup"))
         {
             c.gameObject.SetActive(false);
