@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     private float movementX;
     private float movementY;
     private Renderer rend;
-    public GameObject winText;
     private float default_forward_speed = 0;
     private float default_rotate_speed = 0;
 
@@ -32,7 +31,6 @@ public class PlayerController : MonoBehaviour
         // rend = GetComponent<Renderer>();
         rend = gameObject.transform.GetChild(0).GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>();
         countdown_Timer = textBox.GetComponent<Countdown_timer>();
-        winText.SetActive(false);
         default_forward_speed = forward_speed;
         default_rotate_speed = rotate_speed;
         for (int i = 0; i < Squee_materials.Length; i++) 
@@ -103,10 +101,7 @@ public class PlayerController : MonoBehaviour
                 rotate_speed+=10;
             }
         }
-        else if(c.gameObject.CompareTag("EndFlag"))
-        {
-            winText.SetActive(true);
-        }
+
 
     }
     void Update()
