@@ -15,13 +15,26 @@ public class PlayerController : MonoBehaviour
     private float default_forward_speed = 0;
     private float default_rotate_speed = 0;
 
+    private Material collided_material;
+
+    public Material[] Squee_materials;
+    public Material[] PowerUp_materials;
+
+    //Dictonary of format { Power_Up_Material : Character_Material}
+    private Dictionary<Material, Material> Material_Dictionary = new Dictionary<Material, Material>();
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rend = GetComponent<Renderer>();
+        // rend = GetComponent<Renderer>();
+        rend = gameObject.transform.GetChild(0).GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>();
         winText.SetActive(false);
         default_forward_speed = forward_speed;
         default_rotate_speed = rotate_speed;
+        for (int i = 0; i < Squee_materials.Length; i++) 
+        {
+            Material_Dictionary.Add( PowerUp_materials[i], Squee_materials[i]);
+        } 
     }
 
     void OnMove(InputValue movementValue)
@@ -34,7 +47,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        // rb.AddForce(movement * forward_speed);
         rb.AddForce(transform.forward * movementY * forward_speed);
         transform.Rotate(0,movementX * rotate_speed,0);
     }
@@ -59,41 +71,30 @@ public class PlayerController : MonoBehaviour
         if (c.gameObject.CompareTag("Pickup"))
         {
             c.gameObject.SetActive(false);
-            rend.material = c.gameObject.GetComponent<MeshRenderer>().material;
+            collided_material = c.gameObject.GetComponent<MeshRenderer>().material;
+            print(  Squee_materials[0].name);
             DefaultPower();
-            if (rend.material.name.Replace(" (Instance)", "") == "Phasing")
+            if (collided_material.name.Replace(" (Instance)", "") == "Phasing")
             {
-                //gameObject.GetComponent<PlayerJump>().enabled = false;
+                rend.material = Squee_materials[1];
                 gameObject.layer = LayerMask.NameToLayer("Phasable");
-                
-                // 0 - Default Layer
-                // 4 - Water Layer  
-                // Physics.IgnoreLayerCollision(0, 4, true);
             }
-            else if(rend.material.name.Replace(" (Instance)", "") == "Jumping")
+            else if(collided_material.name.Replace(" (Instance)", "") == "Jumping")
             {
+                rend.material = Squee_materials[0];
                 gameObject.GetComponent<PlayerJump>().enabled = true;
-                // gameObject.layer = LayerMask.NameToLayer("Default");
-                // Physics.IgnoreLayerCollision(0, 4, true);
             }
-            else if(rend.material.name.Replace(" (Instance)", "") == "Freezing")
+            else if(collided_material.name.Replace(" (Instance)", "") == "Freezing")
             {
-                print(" Picked Up Freezing ");
-                // gameObject.GetComponent<PlayerJump>().enabled = false;
-                // gameObject.layer = LayerMask.NameToLayer("Default");
+                rend.material = Squee_materials[2];
                 Physics.IgnoreLayerCollision(0, 4, false);
             }
-            else if(rend.material.name.Replace(" (Instance)", "") == "SpeedUp")
+            else if(collided_material.name.Replace(" (Instance)", "") == "SpeedUp")
             {
+                rend.material = Squee_materials[3];
                 forward_speed+=25;
                 rotate_speed+=10;
             }
-            // else
-            // {
-            //     gameObject.GetComponent<PlayerJump>().enabled = false;
-            //     gameObject.layer = LayerMask.NameToLayer("Default");
-            //     Physics.IgnoreLayerCollision(0, 4, true);
-            // }
         }
         else if(c.gameObject.CompareTag("EndFlag"))
         {
@@ -108,11 +109,6 @@ public class PlayerController : MonoBehaviour
         {
             print("Jump Key Pressed!");
         }
-        else
-        {
-            print("");
-        }
-
     }
 
 

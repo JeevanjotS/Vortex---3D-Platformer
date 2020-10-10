@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b178bb451cfe5443b415b59fd555d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: 1.5
+  jumpPower: 2
 --- !u!135 &382959282
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -719,6 +719,16 @@ MonoBehaviour:
   forward_speed: 15
   rotate_speed: 5
   winText: {fileID: 598363962}
+  Squee_materials:
+  - {fileID: 2100000, guid: 0fd2e8ef89c66a74abce7c46a062bbf5, type: 2}
+  - {fileID: 2100000, guid: a0e66630c2f02fb4c8e775faedd3cf97, type: 2}
+  - {fileID: 2100000, guid: 824cbe2f51968194187e934c9cbf7fc4, type: 2}
+  - {fileID: 2100000, guid: b26cb98bb9ab41d44a0203af9161c773, type: 2}
+  PowerUp_materials:
+  - {fileID: 2100000, guid: 010a3c0fc36add8468b84c16282b289a, type: 2}
+  - {fileID: 2100000, guid: 02959c8b2a991374c9e02c8f4a0f6e2a, type: 2}
+  - {fileID: 2100000, guid: 15b1dedd22d27224eb258ab245999336, type: 2}
+  - {fileID: 2100000, guid: accc34fe9cb1a8540a8096815c842226, type: 2}
 --- !u!54 &382959285
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1546,6 +1556,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 137117275814637290, guid: 57d78de69bcaf8a4e969c0c3350b859b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b9cf2c5980b8f484ab3f08a7191b3c79, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57d78de69bcaf8a4e969c0c3350b859b, type: 3}
 --- !u!1001 &1005869795
