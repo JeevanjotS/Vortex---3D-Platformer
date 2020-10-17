@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private Renderer rend;
     private float default_forward_speed = 0;
     private float default_rotate_speed = 0;
+    public float impulseForce = 10f;
+    public ForceMode force = ForceMode.Impulse;
 
     private Material collided_material;
     private Countdown_timer countdown_Timer;
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         // rend = GetComponent<Renderer>();
-        rend = gameObject.transform.GetChild(0).GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>();
+        rend = gameObject.transform.GetChild(1).GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>();
         countdown_Timer = textBox.GetComponent<Countdown_timer>();
         default_forward_speed = forward_speed;
         default_rotate_speed = rotate_speed;
@@ -37,13 +39,17 @@ public class PlayerController : MonoBehaviour
         {
             Material_Dictionary.Add( PowerUp_materials[i], Squee_materials[i]);
         } 
+        transform.GetChild(0).gameObject.SetActive(false);
+        GlobalVar.projPos = transform.GetChild(0).gameObject.transform.position;
     }
 
     void OnMove(InputValue movementValue)
     {
-        Vector2 movementVector = movementValue.Get<Vector2>();
-        movementX = movementVector.x;
-        movementY = movementVector.y;
+        if (!transform.GetChild(0).gameObject.activeSelf) {
+            Vector2 movementVector = movementValue.Get<Vector2>();
+            movementX = movementVector.x;
+            movementY = movementVector.y;
+        }
     }
 
     void FixedUpdate()
@@ -98,7 +104,7 @@ public class PlayerController : MonoBehaviour
             {
                 rend.material = Squee_materials[3];
                 forward_speed+=25;
-                rotate_speed+=10;
+                rotate_speed+=4;
             }
         }
 
@@ -106,12 +112,17 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        var kb = Keyboard.current;
-        if (kb.spaceKey.isPressed)
-        {
-            print("Jump Key Pressed!");
-        }
+
     }
 
-
+    void OnFire()
+    {
+        if (!transform.GetChild(0).gameObject.activeSelf && (gameObject.GetComponent<Rigidbody>().velocity == new Vector3(0f, 0f, 0f)) && (gameObject.GetComponent<Rigidbody>().angularVelocity == new Vector3(0f, 0f, 0f))) {
+            transform.GetChild(0).gameObject.SetActive(true);
+            Vector3 velDir = new Vector3(0, 0.5f, 1.3f);
+            transform.GetChild(0).gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
+            GlobalVar.projPos = transform.GetChild(0).transform.position;
+            transform.GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(velDir * impulseForce, force);
+        }
+    }
 }

@@ -16,21 +16,18 @@ public class PlayerJump : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
         distanceToGround = col.bounds.extents.y;
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        // print(this.name);
-        var kb = Keyboard.current;
-        if (kb.spaceKey.wasPressedThisFrame)
-        {
-            if(Physics.Raycast(transform.position, - Vector3.up, (float)(distanceToGround)))
-            {
-                rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);   
-            }
-        }
 
+    }
+
+    void OnJump() {
+        if (Physics.Raycast(transform.position, - Vector3.up, (float)(distanceToGround)))
+        {
+            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);   
+        }
     }
 }

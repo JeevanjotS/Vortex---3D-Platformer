@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Pickup
   - EndFlag
+  - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX
