@@ -27,6 +27,7 @@ public class PlayerJump : MonoBehaviour
     void OnJump() {
         if (Physics.Raycast(transform.position, - Vector3.up, (float)(distanceToGround)))
         {
+            FindObjectOfType<SoundManagerScript>().PlaySoundJump();
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);   
         }
     }

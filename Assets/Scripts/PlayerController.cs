@@ -77,13 +77,14 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider c)
     {
         if (c.gameObject.name == "RotatingParent"){
-            countdown_Timer.addToTimer(10);
+            FindObjectOfType<SoundManagerScript>().PlaySoundSlimePickUp();
+            countdown_Timer.addToTimer(20);
         }
         if (c.gameObject.CompareTag("Pickup"))
         {
+            FindObjectOfType<SoundManagerScript>().PlaySoundPickUp();
             c.gameObject.SetActive(false);
             collided_material = c.gameObject.GetComponent<MeshRenderer>().material;
-            print(  Squee_materials[0].name);
             DefaultPower();
             if (collided_material.name.Replace(" (Instance)", "") == "Phasing")
             {
