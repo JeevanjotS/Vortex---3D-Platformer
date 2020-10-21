@@ -23,11 +23,13 @@ public class ProjectileScript : MonoBehaviour
             Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
             // gameObject.transform.position = playerPos + new Vector3(0f, 0.875f, 0f);
             gameObject.transform.position = GlobalVar.projPos;
+            FindObjectOfType<SoundManagerScript>().PlayEnemyProjectileFall();
             transform.gameObject.SetActive(false);
             // Destroy(gameObject);
         }
 
         if (c.gameObject.tag == "Enemy") {
+            FindObjectOfType<SoundManagerScript>().PlayEnemyDeath();
             Destroy(c.gameObject);
         }
     }

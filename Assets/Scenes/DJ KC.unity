@@ -5909,5 +5909,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3234261196303412731, guid: 91e9d1ee83fe9964db685c09242a2d84,
+        type: 3}
+      propertyPath: slimePickUp
+      value: 
+      objectReference: {fileID: 8300000, guid: 38cd20654809ef5488a12499586565de, type: 3}
+    - target: {fileID: 3234261196303412731, guid: 91e9d1ee83fe9964db685c09242a2d84,
+        type: 3}
+      propertyPath: fire
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d22c4516dcc45240b87a0c67539fae6, type: 3}
+    - target: {fileID: 3234261196303412731, guid: 91e9d1ee83fe9964db685c09242a2d84,
+        type: 3}
+      propertyPath: enemy_death
+      value: 
+      objectReference: {fileID: 8300000, guid: 31d2830c1e760824b8a4dbec6ab6528a, type: 3}
+    - target: {fileID: 3234261196303412731, guid: 91e9d1ee83fe9964db685c09242a2d84,
+        type: 3}
+      propertyPath: projectlie_fall
+      value: 
+      objectReference: {fileID: 8300000, guid: 65e7a443bb0199242bec23b234746309, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91e9d1ee83fe9964db685c09242a2d84, type: 3}

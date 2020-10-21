@@ -138,6 +138,7 @@ public class PlayerController : MonoBehaviour
             GlobalVar.projPos = transform.GetChild(0).transform.position;
             // transform.GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(velDir * impulseForce, force);
             transform.GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(direction * impulseForce, force);
+            FindObjectOfType<SoundManagerScript>().PlaySoundFire();
         }
     }
 }
