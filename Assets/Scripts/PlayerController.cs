@@ -15,11 +15,9 @@ public class PlayerController : MonoBehaviour
     private float default_rotate_speed = 0;
     public float impulseForce = 10f;
     public ForceMode force = ForceMode.Impulse;
-    public GameObject deathText;
 
     private Material collided_material;
     private Countdown_timer countdown_Timer;
-    public Vector3 direction;
 
     public Material[] Squee_materials;
     public Material[] PowerUp_materials;
@@ -33,7 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         // rend = GetComponent<Renderer>();
-        rend = gameObject.transform.GetChild(2).GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>();
+        rend = gameObject.transform.GetChild(1).GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>();
         countdown_Timer = textBox.GetComponent<Countdown_timer>();
         default_forward_speed = forward_speed;
         default_rotate_speed = rotate_speed;
@@ -43,7 +41,6 @@ public class PlayerController : MonoBehaviour
         } 
         transform.GetChild(0).gameObject.SetActive(false);
         GlobalVar.projPos = transform.GetChild(0).gameObject.transform.position;
-        deathText.SetActive(false);
     }
 
     void OnMove(InputValue movementValue)
@@ -112,13 +109,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (c.gameObject.CompareTag("Enemy")) {
-                deathText.SetActive(true);
-        }
+
     }
     void Update()
     {
-
+        
     }
 
     void OnFire()
@@ -126,17 +121,9 @@ public class PlayerController : MonoBehaviour
         if (!transform.GetChild(0).gameObject.activeSelf && (gameObject.GetComponent<Rigidbody>().velocity == new Vector3(0f, 0f, 0f)) && (gameObject.GetComponent<Rigidbody>().angularVelocity == new Vector3(0f, 0f, 0f))) {
             transform.GetChild(0).gameObject.SetActive(true);
             Vector3 velDir = new Vector3(0, 0.5f, 1.3f);
-
-            direction = transform.GetChild(1).transform.position - transform.GetChild(0).transform.position;
-            direction = Vector3.Normalize(direction);
-            Vector3 temp = direction;
-            temp.y = 0.5f;
-            direction = temp;
-
             transform.GetChild(0).gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
             GlobalVar.projPos = transform.GetChild(0).transform.position;
-            // transform.GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(velDir * impulseForce, force);
-            transform.GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(direction * impulseForce, force);
+            transform.GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(velDir * impulseForce, force);
         }
     }
 }

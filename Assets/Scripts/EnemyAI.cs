@@ -24,7 +24,6 @@ public class EnemyAI : MonoBehaviour
         // animator = GetComponent<Animator>();
         setNextWaypoint();
         currWaypoint = -1;
-
     }
 
     // Update is called once per frame
@@ -35,9 +34,11 @@ public class EnemyAI : MonoBehaviour
 
         if (dist < 30f && aiState == AIState.Patrol) {
             aiState = AIState.Chase;
+            print("chase");
         } else if (dist > 40f && aiState == AIState.Chase) {
             aiState = AIState.Patrol;
             setNextWaypoint();
+            print("chase no mo");
         }
 
         switch (aiState) {
