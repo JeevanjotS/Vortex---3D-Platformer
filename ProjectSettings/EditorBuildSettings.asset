@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: b7fce505563b65241878ab664b449717
+  - enabled: 1
+    path: Assets/Scenes/DJ KC.unity
+    guid: d9702816ffcb91644a74c6e4e6400c9e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 704dac37fde1c6043839fcf92797a203,
       type: 2}
