@@ -34,11 +34,9 @@ public class EnemyAI : MonoBehaviour
 
         if (dist < 30f && aiState == AIState.Patrol) {
             aiState = AIState.Chase;
-            print("chase");
         } else if (dist > 40f && aiState == AIState.Chase) {
             aiState = AIState.Patrol;
             setNextWaypoint();
-            print("chase no mo");
         }
 
         switch (aiState) {
@@ -49,8 +47,6 @@ public class EnemyAI : MonoBehaviour
                 // animator.SetFloat("vely", nma.velocity.magnitude / nma.speed);
                 break;
             case AIState.Chase:
-                // Vector3 displacement = this.transform.position - GameObject.FindGameObjectWithTag("Player").transform.position;
-                // gameObject.GetComponent<Rigidbody>().velocity = Vector3.Normalize(displacement) * enemySpeed;
                 nma.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
                 // animator.SetFloat("vely", nma.velocity.magnitude / nma.speed);
                 break;
@@ -68,14 +64,7 @@ public class EnemyAI : MonoBehaviour
             } else {
                 currWaypoint++;
             }
-            // if (currWaypoint == 5) { // If player is within certain radius
-            //     float dist = Vector3.Distance(waypoints[5].transform.position, this.transform.position);
-            //     float lookAheadT = dist / nma.speed - 1;
-            //     Vector3 futureTarget = waypoints[5].transform.position + lookAheadT * waypoints[5].GetComponent<VelocityReporter>().velocity; // Player - Enemy -> then magnitude for scalar distance
-            //     nma.SetDestination(futureTarget);
-            // } else {
             nma.SetDestination(waypoints[currWaypoint].transform.position);
-            // }
         }
     }
 }
