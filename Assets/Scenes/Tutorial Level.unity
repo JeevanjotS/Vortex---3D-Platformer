@@ -605,6 +605,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShortWall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87b47499c5a2b364fbb8a24e0cb3deb9, type: 3}
 --- !u!1 &145654667
@@ -859,6 +869,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ground_Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989439456111961875, guid: 465ec186148875e4c9a573ed3ae2d74e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989439456111961875, guid: 465ec186148875e4c9a573ed3ae2d74e,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 465ec186148875e4c9a573ed3ae2d74e, type: 3}
@@ -2032,6 +2052,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShortWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87b47499c5a2b364fbb8a24e0cb3deb9, type: 3}
 --- !u!1001 &581457964
@@ -2105,6 +2135,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ground_Water (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989439456111961875, guid: 465ec186148875e4c9a573ed3ae2d74e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989439456111961875, guid: 465ec186148875e4c9a573ed3ae2d74e,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 465ec186148875e4c9a573ed3ae2d74e, type: 3}
@@ -2606,6 +2646,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShortWall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584005041068643336, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87b47499c5a2b364fbb8a24e0cb3deb9, type: 3}
@@ -4258,6 +4313,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TallWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -9075992526016546474, guid: 87b47499c5a2b364fbb8a24e0cb3deb9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 87b47499c5a2b364fbb8a24e0cb3deb9, type: 3}
@@ -4973,6 +5038,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShortWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87b47499c5a2b364fbb8a24e0cb3deb9, type: 3}
 --- !u!1 &1719328221
@@ -5179,6 +5254,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShortWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310273283428709302, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87b47499c5a2b364fbb8a24e0cb3deb9, type: 3}
@@ -5980,6 +6065,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ground_Water (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989439456111961875, guid: 465ec186148875e4c9a573ed3ae2d74e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989439456111961875, guid: 465ec186148875e4c9a573ed3ae2d74e,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 465ec186148875e4c9a573ed3ae2d74e, type: 3}
