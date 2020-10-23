@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class PlayerController : MonoBehaviour
     public Material[] PowerUp_materials;
 
     public GameObject textBox;
+
+    public Text powerUpTextBox;
 
     //Dictonary of format { Power_Up_Material : Character_Material}
     private Dictionary<Material, Material> Material_Dictionary = new Dictionary<Material, Material>();
@@ -92,21 +95,25 @@ public class PlayerController : MonoBehaviour
             DefaultPower();
             if (collided_material.name.Replace(" (Instance)", "") == "Phasing")
             {
+                powerUpTextBox.text = " Power : Phasing";
                 rend.material = Squee_materials[1];
                 gameObject.layer = LayerMask.NameToLayer("Phasable");
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "Jumping")
             {
+                powerUpTextBox.text = " Power : Jumping";
                 rend.material = Squee_materials[0];
                 gameObject.GetComponent<PlayerJump>().enabled = true;
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "Freezing")
             {
+                powerUpTextBox.text = " Power : Freezing";
                 rend.material = Squee_materials[2];
                 Physics.IgnoreLayerCollision(0, 4, false);
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "SpeedUp")
             {
+                powerUpTextBox.text = " Power : Speed";
                 rend.material = Squee_materials[3];
                 forward_speed+=25;
                 rotate_speed+=4;
@@ -114,7 +121,6 @@ public class PlayerController : MonoBehaviour
         }
 
         if (c.gameObject.CompareTag("Enemy")) {
-                FindObjectOfType<SoundManagerScript>().PlayEnemyDeath();
                 Time.timeScale = 0f;
                 deathText.SetActive(true);
         }
