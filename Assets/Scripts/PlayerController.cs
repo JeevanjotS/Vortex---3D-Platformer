@@ -114,6 +114,8 @@ public class PlayerController : MonoBehaviour
         }
 
         if (c.gameObject.CompareTag("Enemy")) {
+                FindObjectOfType<SoundManagerScript>().PlayEnemyDeath();
+                Time.timeScale = 0f;
                 deathText.SetActive(true);
         }
     }
