@@ -6700,7 +6700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Running out of time? Pick up this radioactive Slime and 10 seconds will
+  m_text: Running out of time? Pick up this radioactive Slime and 20 seconds will
     be added to your time.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7022,7 +7022,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'The final objective of the game is to reach your mothership and leave
-    theplanet safely, before the timer runs out.
+    the planet safely, before the timer runs out.
 
 
     The mothership awaits atop
