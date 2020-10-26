@@ -1,6 +1,8 @@
 # Vortex---3D-Platformer
 A 3D platformer developed in Unity
 
+DJ Yu, Kacey Chung, Jeevanjot Singh, Kevin George
+
 How to Play:
 
     The player can start a new game through the start menu UI. The player can control the character via WASD or the arrow keys. The player should move around to pick up various power-ups that will allow the player to interact with the world in different ways (power up will change the character color and the UI will tell the player which power up they currently have). UV slime collectables can also be picked up by the player to increase the time left on the timer. The player can also click the left mouse button to fire a projectile that will destory enemies. The goal of the game is to traverse through the level in order to find a way to get to the mothership plane (the end of the level) without dying to enemies or letting the timer run out.
