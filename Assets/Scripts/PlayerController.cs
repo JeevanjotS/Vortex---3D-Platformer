@@ -31,10 +31,13 @@ public class PlayerController : MonoBehaviour
     public Text powerUpTextBox;
     public Material wallDefaultMaterial;
     public Material wallPhaseMaterial;
+    public Material waterDefaultMaterial;
+    public Material waterSolidMaterial;
 
     //Dictonary of format { Power_Up_Material : Character_Material}
     private Dictionary<Material, Material> Material_Dictionary = new Dictionary<Material, Material>();
     private GameObject[] phasable_walls;
+    private GameObject[] water_game_objects;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -53,13 +56,22 @@ public class PlayerController : MonoBehaviour
 
         // List of phasable wall game objects
         phasable_walls = GameObject.FindGameObjectsWithTag("Phasable");
+        water_game_objects = GameObject.FindGameObjectsWithTag("Water");
     }
 
-    private void set_material(Material material)
+    private void set_wall_material(Material material)
     {
         for (int i = 0; i < phasable_walls.Length; i++) 
         {
             phasable_walls[i].GetComponent<Renderer>().material = material;
+        } 
+    }
+
+    private void set_water_material(Material material)
+    {
+        for (int i = 0; i < water_game_objects.Length; i++) 
+        {
+            water_game_objects[i].GetComponent<Renderer>().material = material;
         } 
     }
 
@@ -92,7 +104,8 @@ public class PlayerController : MonoBehaviour
         // Set forward_speed and rotate speed to original values
         forward_speed = default_forward_speed;
         rotate_speed = default_rotate_speed;
-        set_material( wallDefaultMaterial );  
+        set_wall_material( wallDefaultMaterial );
+        set_water_material( waterDefaultMaterial );   
     }
 
     private void OnTriggerEnter(Collider c)
@@ -112,7 +125,7 @@ public class PlayerController : MonoBehaviour
                 powerUpTextBox.text = " Power : Phasing";
                 rend.material = Squee_materials[1];
                 gameObject.layer = LayerMask.NameToLayer("Phasable");
-                set_material( wallPhaseMaterial );  
+                set_wall_material( wallPhaseMaterial );  
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "Jumping")
             {
@@ -125,6 +138,7 @@ public class PlayerController : MonoBehaviour
                 powerUpTextBox.text = " Power : Freezing";
                 rend.material = Squee_materials[2];
                 Physics.IgnoreLayerCollision(0, 4, false);
+                set_water_material( waterSolidMaterial );
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "SpeedUp")
             {

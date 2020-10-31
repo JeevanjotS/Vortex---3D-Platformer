@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Projectile
   - Phasable
+  - Water
   layers:
   - Default
   - TransparentFX
