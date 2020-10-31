@@ -8,6 +8,7 @@ TagManager:
   - EndFlag
   - Enemy
   - Projectile
+  - Phasable
   layers:
   - Default
   - TransparentFX

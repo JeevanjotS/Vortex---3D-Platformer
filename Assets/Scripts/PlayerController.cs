@@ -29,10 +29,12 @@ public class PlayerController : MonoBehaviour
     public GameObject textBox;
 
     public Text powerUpTextBox;
+    public Material wallDefaultMaterial;
+    public Material wallPhaseMaterial;
 
     //Dictonary of format { Power_Up_Material : Character_Material}
     private Dictionary<Material, Material> Material_Dictionary = new Dictionary<Material, Material>();
-
+    private GameObject[] phasable_walls;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -48,6 +50,17 @@ public class PlayerController : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(false);
         GlobalVar.projPos = transform.GetChild(0).gameObject.transform.position;
         deathText.SetActive(false);
+
+        // List of phasable wall game objects
+        phasable_walls = GameObject.FindGameObjectsWithTag("Phasable");
+    }
+
+    private void set_material(Material material)
+    {
+        for (int i = 0; i < phasable_walls.Length; i++) 
+        {
+            phasable_walls[i].GetComponent<Renderer>().material = material;
+        } 
     }
 
     void OnMove(InputValue movementValue)
@@ -79,6 +92,7 @@ public class PlayerController : MonoBehaviour
         // Set forward_speed and rotate speed to original values
         forward_speed = default_forward_speed;
         rotate_speed = default_rotate_speed;
+        set_material( wallDefaultMaterial );  
     }
 
     private void OnTriggerEnter(Collider c)
@@ -98,6 +112,7 @@ public class PlayerController : MonoBehaviour
                 powerUpTextBox.text = " Power : Phasing";
                 rend.material = Squee_materials[1];
                 gameObject.layer = LayerMask.NameToLayer("Phasable");
+                set_material( wallPhaseMaterial );  
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "Jumping")
             {
