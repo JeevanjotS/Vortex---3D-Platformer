@@ -115,8 +115,8 @@ public class PlayerController : MonoBehaviour
             {
                 powerUpTextBox.text = " Power : Speed";
                 rend.material = Squee_materials[3];
-                forward_speed+=25;
-                rotate_speed+=4;
+                forward_speed+=100;
+                rotate_speed+=1;
             }
         }
 
