@@ -2635,7 +2635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forward_speed: 150
   rotate_speed: 3
-  impulseForce: 10
+  impulseForce: 25
   force: 1
   deathText: {fileID: 1775796072}
   direction: {x: 0, y: 0, z: 0}

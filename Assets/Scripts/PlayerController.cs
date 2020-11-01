@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
     private Material collided_material;
     private Countdown_timer countdown_Timer;
+    private double distanceToGround;
+    private Collider col;
 
     public Material[] Squee_materials;
     public Material[] PowerUp_materials;
@@ -60,8 +63,11 @@ public class PlayerController : MonoBehaviour
         water_game_objects = GameObject.FindGameObjectsWithTag("Water");
         // print();
         animator = GetComponentsInChildren<Animator>( this.transform.GetChild(2).gameObject )[0];
-        animator.SetBool ( "AnimationOn", true); 
+        animator.SetBool ( "AnimationOn", false); 
         // print(  animator.name );
+        rb = GetComponent<Rigidbody>();
+        col = GetComponent<Collider>();
+        distanceToGround = col.bounds.extents.y;
     }
 
     private void set_wall_material(Material material)
@@ -94,13 +100,13 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(transform.forward * movementY * forward_speed);
-        if (movementY>=0.01)
+        if (movementY>=0.01 && Physics.Raycast(transform.position, - Vector3.up, (float)(distanceToGround)))
         {
-            animator.SetBool ( "AnimationOn", true); 
+            animator.SetBool ( "Moving", true); 
         }
         else
         {
-            animator.SetBool ( "AnimationOn", false); 
+            animator.SetBool ( "Moving", false); 
         }
         transform.Rotate(0,movementX * rotate_speed,0);
     }
