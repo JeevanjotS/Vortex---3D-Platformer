@@ -6,7 +6,7 @@ public class SoundManagerScript : MonoBehaviour
     {
     // Start is called before the first frame update
     
-    public AudioClip jump, pickUp, slimePickUp, fire, enemy_death, projectlie_fall;
+    public AudioClip jump, pickUp, slimePickUp, fire, enemy_death, projectlie_fall, end_level, falling;
     public AudioSource audioSource;
     
     void Start()
@@ -38,5 +38,15 @@ public class SoundManagerScript : MonoBehaviour
     public void PlayEnemyProjectileFall()
     {
         audioSource.PlayOneShot(projectlie_fall);
+    }
+
+    public void PlayEndLevel()
+    {
+        audioSource.PlayOneShot(end_level);
+    }
+
+    public void PlayFalling()
+    {
+        audioSource.PlayOneShot(falling);
     }
 }

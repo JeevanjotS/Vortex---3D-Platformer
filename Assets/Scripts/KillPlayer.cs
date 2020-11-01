@@ -21,6 +21,7 @@ public class KillPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider c)
     {
+        FindObjectOfType<SoundManagerScript>().PlayFalling();
         deathText.SetActive(true);
     }
 }
