@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private Dictionary<Material, Material> Material_Dictionary = new Dictionary<Material, Material>();
     private GameObject[] phasable_walls;
     private GameObject[] water_game_objects;
+    Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -57,6 +58,10 @@ public class PlayerController : MonoBehaviour
         // List of phasable wall game objects
         phasable_walls = GameObject.FindGameObjectsWithTag("Phasable");
         water_game_objects = GameObject.FindGameObjectsWithTag("Water");
+        // print();
+        animator = GetComponentsInChildren<Animator>( this.transform.GetChild(2).gameObject )[0];
+        animator.SetBool ( "AnimationOn", true); 
+        // print(  animator.name );
     }
 
     private void set_wall_material(Material material)
@@ -82,12 +87,21 @@ public class PlayerController : MonoBehaviour
             movementX = movementVector.x;
             movementY = movementVector.y;
         }
+
     }
 
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(transform.forward * movementY * forward_speed);
+        if (movementY>=0.01)
+        {
+            animator.SetBool ( "AnimationOn", true); 
+        }
+        else
+        {
+            animator.SetBool ( "AnimationOn", false); 
+        }
         transform.Rotate(0,movementX * rotate_speed,0);
     }
 
