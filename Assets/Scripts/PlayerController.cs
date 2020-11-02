@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(transform.forward * movementY * forward_speed);
-        if (movementY>=0.01 && Physics.Raycast(transform.position, - Vector3.up, (float)(distanceToGround)))
+        if ((movementY>=0.01 || movementY<=-0.01 ) && Physics.Raycast(transform.position, - Vector3.up, (float)(distanceToGround)))
         {
             animator.SetBool ( "Moving", true); 
         }
