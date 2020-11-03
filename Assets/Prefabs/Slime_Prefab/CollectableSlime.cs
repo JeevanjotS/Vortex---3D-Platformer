@@ -8,7 +8,7 @@ public class CollectableSlime : MonoBehaviour
 {
     void OnTriggerEnter(Collider c)
     {
-        print("Here");
+        // print("Here");
         if (c.attachedRigidbody)
         {   
             this.gameObject.SetActive(false);

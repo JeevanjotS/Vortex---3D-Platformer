@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         water_game_objects = GameObject.FindGameObjectsWithTag("Water");
         // print();
         animator = GetComponentsInChildren<Animator>( this.transform.GetChild(2).gameObject )[0];
-        animator.SetBool ( "AnimationOn", false); 
+        animator.SetBool ( "Moving", false); 
         // print(  animator.name );
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();

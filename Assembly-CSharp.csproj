@@ -58,6 +58,12 @@
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Materials\Starfield Skybox\Demo\Script\LookCamera.cs" />
      <Compile Include="Assets\PauseMenu.cs" />
+     <Compile Include="Assets\Prefabs\PowerUp\Scripts\CustomizablePowerUp.cs" />
+     <Compile Include="Assets\Prefabs\PowerUp\Scripts\PowerUpManager.cs" />
+     <Compile Include="Assets\Prefabs\PowerUp\Scripts\PowerUpRotation.cs" />
+     <Compile Include="Assets\Prefabs\PowerUp\Scripts\ScaleParticles.cs" />
+     <Compile Include="Assets\Prefabs\PowerUp\Scripts\TakeablePowerUp.cs" />
+     <Compile Include="Assets\Prefabs\PowerUp\Scripts\Utility\Singleton.cs" />
      <Compile Include="Assets\Prefabs\Slime_Prefab\CollectableSlime.cs" />
      <Compile Include="Assets\Prefabs\Slime_Prefab\StartAnimation.cs" />
      <Compile Include="Assets\Prefabs\amusedART\SlimeRabbit\Sc_AniTest.cs" />
@@ -80,6 +86,7 @@
      <Compile Include="Assets\Scripts\TutorialManager.cs" />
      <Compile Include="Assets\Scripts\VelocityReporter.cs" />
      <Compile Include="Assets\SettingsMenu.cs" />
+     <Compile Include="Assets\material.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
