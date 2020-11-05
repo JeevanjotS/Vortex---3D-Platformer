@@ -17,4 +17,5 @@ public class TractorBeamCollider : MonoBehaviour
             //Time.timeScale = 0f;
         }
     }
+
 }
