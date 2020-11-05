@@ -8,6 +8,7 @@ public class SoundManagerScript : MonoBehaviour
     
     public AudioClip jump, pickUp, slimePickUp, fire, enemy_death, projectlie_fall, end_level, falling;
     public AudioSource audioSource;
+    public float falling_volume, slimePickUp_volume, pickUp_volume;
     
     void Start()
     {
@@ -21,11 +22,11 @@ public class SoundManagerScript : MonoBehaviour
     }
     public void PlaySoundPickUp()
     {
-        audioSource.PlayOneShot(pickUp);
+        audioSource.PlayOneShot(pickUp, pickUp_volume);
     }
     public void PlaySoundSlimePickUp()
     {
-        audioSource.PlayOneShot(slimePickUp);
+        audioSource.PlayOneShot(slimePickUp, slimePickUp_volume);
     }
     public void PlaySoundFire()
     {
@@ -47,6 +48,6 @@ public class SoundManagerScript : MonoBehaviour
 
     public void PlayFalling()
     {
-        audioSource.PlayOneShot(falling);
+        audioSource.PlayOneShot(falling,falling_volume);
     }
 }

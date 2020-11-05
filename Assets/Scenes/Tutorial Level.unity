@@ -7500,7 +7500,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382959280}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b178bb451cfe5443b415b59fd555d5b, type: 3}
   m_Name: 
@@ -31929,6 +31929,21 @@ PrefabInstance:
       propertyPath: falling
       value: 
       objectReference: {fileID: 8300000, guid: 5fce383731759484f9a16f0d85c41b83, type: 3}
+    - target: {fileID: 3234261196303412731, guid: 91e9d1ee83fe9964db685c09242a2d84,
+        type: 3}
+      propertyPath: falling_volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234261196303412731, guid: 91e9d1ee83fe9964db685c09242a2d84,
+        type: 3}
+      propertyPath: slimePickUp_volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234261196303412731, guid: 91e9d1ee83fe9964db685c09242a2d84,
+        type: 3}
+      propertyPath: pickUp_volume
+      value: 0.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91e9d1ee83fe9964db685c09242a2d84, type: 3}
 --- !u!1001 &8076864825192773682
