@@ -57,8 +57,8 @@
   <ItemGroup>
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Materials\Starfield Skybox\Demo\Script\LookCamera.cs" />
-     <Compile Include="Assets\MeteorSpawner.cs" />
      <Compile Include="Assets\PauseMenu.cs" />
+     <Compile Include="Assets\Prefabs\Meteor\MeteorSpawner.cs" />
      <Compile Include="Assets\Prefabs\Meteor\MeteorVelocity.cs" />
      <Compile Include="Assets\Prefabs\PowerUp\Scripts\CustomizablePowerUp.cs" />
      <Compile Include="Assets\Prefabs\PowerUp\Scripts\PowerUpManager.cs" />

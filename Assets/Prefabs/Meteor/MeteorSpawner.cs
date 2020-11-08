@@ -28,7 +28,6 @@ public class MeteorSpawner : MonoBehaviour
             velocity_y = velocity_y * 50 / velocity_magnitude;
             velocity_z = velocity_z * 50 / velocity_magnitude;
             meteor = Instantiate(meteor_prefab, position, Quaternion.identity);
-            print( new Vector3(velocity_x, velocity_y, velocity_z));
             meteor.gameObject.GetComponent<MeteorVelocity>().speed = new Vector3(velocity_x, velocity_y, velocity_z);
         }
     }

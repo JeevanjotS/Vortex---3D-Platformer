@@ -16823,7 +16823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meteor_prefab: {fileID: 6034920010056532707, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
     type: 3}
-  numberOfStartMeteors: 18
+  numberOfStartMeteors: 5
   updateMeteorProbability: 0.01
 --- !u!1 &1097144904
 GameObject:
