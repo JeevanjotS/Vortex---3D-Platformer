@@ -1312,9 +1312,9 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 3084
-        ctime2: 11372
-        ctime3: 47224
+        ctime1: 2506
+        ctime2: 43947
+        ctime3: 60331
         ctime4: 0
         ctime5: 0
         ctime6: 0
@@ -4767,7 +4767,7 @@ GameObject:
   - component: {fileID: 6034920010059031233}
   - component: {fileID: 6034920010056532706}
   m_Layer: 0
-  m_Name: Meteor1
+  m_Name: Meteor_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4847,4 +4847,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b570b69cfd9226046a739d52f871274c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 50, y: 0, z: 0}
+  speed: {x: 0, y: 0, z: 0}
