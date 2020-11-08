@@ -130,6 +130,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider c)
     {
+
         if (c.gameObject.name == "RotatingParent"){
             FindObjectOfType<SoundManagerScript>().PlaySoundSlimePickUp();
             countdown_Timer.addToTimer(20);

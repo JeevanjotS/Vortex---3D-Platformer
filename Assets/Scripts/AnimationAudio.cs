@@ -8,6 +8,7 @@ public class AnimationAudio : MonoBehaviour
     public AudioClip audioClip;
 
     public AudioSource audioSource;
+    public AudioClip thudClip;
     void Start()
     {
         
@@ -17,5 +18,10 @@ public class AnimationAudio : MonoBehaviour
     void PlaySound()
     {
         audioSource.PlayOneShot(audioClip);
+    }
+
+    void PlayThud()
+    {
+        audioSource.PlayOneShot(thudClip, 0.5f);
     }
 }

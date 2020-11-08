@@ -12849,6 +12849,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462425342}
   m_CullTransparentMesh: 0
+--- !u!1001 &503947258
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2926788334299226400, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_Name
+      value: For Background Music (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926788334299226402, guid: a7fb3b0006675f5408e2ecf59e1359bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7fb3b0006675f5408e2ecf59e1359bc, type: 3}
 --- !u!1 &506408101
 GameObject:
   m_ObjectHideFlags: 0
@@ -13177,6 +13246,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1169578159}
     m_Modifications:
+    - target: {fileID: 347910024102038969, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1443113241084643601, guid: 87b47499c5a2b364fbb8a24e0cb3deb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28265,6 +28339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: a285e86757942524ea1ce4c09d3d76a3, type: 3}
   audioSource: {fileID: 1582914680}
+  thudClip: {fileID: 8300000, guid: 782988fe1d129314c93050c5a7904b09, type: 3}
 --- !u!1001 &1527399720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36999,6 +37074,11 @@ PrefabInstance:
       propertyPath: pickUp_volume
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 3234261196303412731, guid: 91e9d1ee83fe9964db685c09242a2d84,
+        type: 3}
+      propertyPath: thud
+      value: 
+      objectReference: {fileID: 8300000, guid: 782988fe1d129314c93050c5a7904b09, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91e9d1ee83fe9964db685c09242a2d84, type: 3}
 --- !u!1001 &8076864825192773682
