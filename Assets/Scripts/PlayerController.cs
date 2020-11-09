@@ -133,7 +133,6 @@ public class PlayerController : MonoBehaviour
         rotate_speed = default_rotate_speed;
         set_wall_material( wallDefaultMaterial );
         set_water_material( waterDefaultMaterial );   
-        // particleSystemGameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider c)
@@ -175,8 +174,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "SpeedUp")
             {
-                particleSystem.startColor = ParticleColors[3];//new Color(0,0,0);//ParticleColors[3];
-                // particleSystemGameObject.SetActive(true);
+                particleSystem.startColor = ParticleColors[3];
                 powerUpTextBox.text = " Power : Speed";
                 rend.material = Squee_materials[3];
                 forward_speed+=100;

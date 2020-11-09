@@ -4893,6 +4893,7 @@ GameObject:
   - component: {fileID: 6034920010057579287}
   - component: {fileID: 6034920010059031233}
   - component: {fileID: 6034920010056532706}
+  - component: {fileID: 2702956128532305366}
   m_Layer: 0
   m_Name: Meteor_Prefab
   m_TagString: Untagged
@@ -4976,3 +4977,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 0, y: 0, z: 0}
+--- !u!135 &2702956128532305366
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6034920010056532707}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.7577386
+  m_Center: {x: 0.117064714, y: -0.087827444, z: 0.23515844}

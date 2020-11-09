@@ -12,4 +12,9 @@ public class MeteorVelocity : MonoBehaviour
     {
         transform.Translate(speed * Time.deltaTime ); 
     }
+
+    private void OnTriggerEnter(Collider c)
+    {
+        gameObject.SetActive(false);
+    }
 }
