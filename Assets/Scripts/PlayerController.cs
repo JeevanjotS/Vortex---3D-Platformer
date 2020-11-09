@@ -36,11 +36,14 @@ public class PlayerController : MonoBehaviour
     public Material wallPhaseMaterial;
     public Material waterDefaultMaterial;
     public Material waterSolidMaterial;
+    public Color[] ParticleColors;
 
     //Dictonary of format { Power_Up_Material : Character_Material}
     private Dictionary<Material, Material> Material_Dictionary = new Dictionary<Material, Material>();
     private GameObject[] phasable_walls;
     private GameObject[] water_game_objects;
+    private GameObject particleSystemGameObject;
+    ParticleSystem particleSystem;
     Animator animator;
     void Start()
     {
@@ -68,6 +71,10 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
         distanceToGround = col.bounds.extents.y;
+        particleSystemGameObject = this.transform.GetChild(2).GetChild(1).gameObject;
+        particleSystem = particleSystemGameObject.GetComponent<ParticleSystem>();
+        //.startColor = new Color(0,0,0);
+        print(new Color(0,0,0));
     }
 
     private void set_wall_material(Material material)
@@ -126,6 +133,7 @@ public class PlayerController : MonoBehaviour
         rotate_speed = default_rotate_speed;
         set_wall_material( wallDefaultMaterial );
         set_water_material( waterDefaultMaterial );   
+        // particleSystemGameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider c)
@@ -139,10 +147,12 @@ public class PlayerController : MonoBehaviour
         {
             FindObjectOfType<SoundManagerScript>().PlaySoundPickUp();
             c.gameObject.SetActive(false);
+            particleSystemGameObject.SetActive(true);
             collided_material = c.gameObject.GetComponent<MeshRenderer>().material;
             DefaultPower();
             if (collided_material.name.Replace(" (Instance)", "") == "Phasing")
             {
+                particleSystem.startColor = ParticleColors[0];
                 powerUpTextBox.text = " Power : Phasing";
                 rend.material = Squee_materials[1];
                 gameObject.layer = LayerMask.NameToLayer("Phasable");
@@ -150,12 +160,14 @@ public class PlayerController : MonoBehaviour
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "Jumping")
             {
+                particleSystem.startColor = ParticleColors[1];
                 powerUpTextBox.text = " Power : Jumping";
                 rend.material = Squee_materials[0];
                 gameObject.GetComponent<PlayerJump>().enabled = true;
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "Freezing")
             {
+                particleSystem.startColor = ParticleColors[2];
                 powerUpTextBox.text = " Power : Freezing";
                 rend.material = Squee_materials[2];
                 Physics.IgnoreLayerCollision(0, 4, false);
@@ -163,6 +175,8 @@ public class PlayerController : MonoBehaviour
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "SpeedUp")
             {
+                particleSystem.startColor = ParticleColors[3];//new Color(0,0,0);//ParticleColors[3];
+                // particleSystemGameObject.SetActive(true);
                 powerUpTextBox.text = " Power : Speed";
                 rend.material = Squee_materials[3];
                 forward_speed+=100;
