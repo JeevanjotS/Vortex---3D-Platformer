@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject deathText;
     public Vector3 direction;
+    public float waterDefaultY;
+    public float waterFreezeY;
 
     private Material collided_material;
     private Countdown_timer countdown_Timer;
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private GameObject[] phasable_walls;
     private GameObject[] water_game_objects;
     private GameObject particleSystemGameObject;
+    private Vector3 water_pos;
     ParticleSystem particleSystem;
     Animator animator;
     void Start()
@@ -85,12 +88,23 @@ public class PlayerController : MonoBehaviour
         } 
     }
 
-    private void set_water_material(Material material)
+    private void set_water_material_and_Y(Material material, float waterY)
     {
         for (int i = 0; i < water_game_objects.Length; i++) 
         {
             water_game_objects[i].GetComponent<Renderer>().material = material;
+            water_pos = water_game_objects[i].transform.position;
+            water_game_objects[i].transform.position = new Vector3(water_pos.x, waterY, water_pos.z);  
         } 
+
+        // if (moveUp){
+        //     for (int i = 0; i < water_game_objects.Length; i++) 
+        //     {
+        //         water_game_objects[i].GetComponent<Renderer>().material = material;
+        //         water_pos = water_game_objects[i].transform.position;
+        //         water_game_objects[i].transform.position = new Vector3(water_pos.x, freezeWaterY, water_pos.z);  
+        //     }  
+        // }
     }
 
     void OnMove(InputValue movementValue)
@@ -132,7 +146,7 @@ public class PlayerController : MonoBehaviour
         forward_speed = default_forward_speed;
         rotate_speed = default_rotate_speed;
         set_wall_material( wallDefaultMaterial );
-        set_water_material( waterDefaultMaterial );   
+        set_water_material_and_Y( waterDefaultMaterial , waterDefaultY);   
     }
 
     private void OnTriggerEnter(Collider c)
@@ -170,7 +184,7 @@ public class PlayerController : MonoBehaviour
                 powerUpTextBox.text = " Power : Freezing";
                 rend.material = Squee_materials[2];
                 Physics.IgnoreLayerCollision(0, 4, false);
-                set_water_material( waterSolidMaterial );
+                set_water_material_and_Y( waterSolidMaterial, waterFreezeY );
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "SpeedUp")
             {
