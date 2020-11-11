@@ -91,6 +91,7 @@
      <Compile Include="Assets\Scripts\VelocityReporter.cs" />
      <Compile Include="Assets\SettingsMenu.cs" />
      <Compile Include="Assets\StartScreen.cs" />
+     <Compile Include="Assets\TextureFix.cs" />
      <Compile Include="Assets\material.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
