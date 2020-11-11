@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     public Material wallPhaseMaterial;
     public Material waterDefaultMaterial;
     public Material waterSolidMaterial;
+    public Material longWaterDefaultMaterial;
+    public Material longWaterSolidMaterial;
     public Color[] ParticleColors;
     public int SlimePickUpTime;
 
@@ -77,8 +79,7 @@ public class PlayerController : MonoBehaviour
         distanceToGround = col.bounds.extents.y;
         particleSystemGameObject = this.transform.GetChild(2).GetChild(1).gameObject;
         particleSystem = particleSystemGameObject.GetComponent<ParticleSystem>();
-        //.startColor = new Color(0,0,0);
-        print(new Color(0,0,0));
+        
     }
 
     private void set_wall_material(Material material)
@@ -89,23 +90,20 @@ public class PlayerController : MonoBehaviour
         } 
     }
 
-    private void set_water_material_and_Y(Material material, float waterY)
+    private void set_water_material_and_Y(Material material, Material longMaterial, float waterY)
     {
         for (int i = 0; i < water_game_objects.Length; i++) 
         {
-            water_game_objects[i].GetComponent<Renderer>().material = material;
+            if (water_game_objects[i].name == "Long Water"){
+                water_game_objects[i].GetComponent<Renderer>().material = longMaterial;
+            }
+            else
+            {
+                water_game_objects[i].GetComponent<Renderer>().material = material;
+            }
             water_pos = water_game_objects[i].transform.position;
             water_game_objects[i].transform.position = new Vector3(water_pos.x, waterY, water_pos.z);  
         } 
-
-        // if (moveUp){
-        //     for (int i = 0; i < water_game_objects.Length; i++) 
-        //     {
-        //         water_game_objects[i].GetComponent<Renderer>().material = material;
-        //         water_pos = water_game_objects[i].transform.position;
-        //         water_game_objects[i].transform.position = new Vector3(water_pos.x, freezeWaterY, water_pos.z);  
-        //     }  
-        // }
     }
 
     void OnMove(InputValue movementValue)
@@ -147,7 +145,7 @@ public class PlayerController : MonoBehaviour
         forward_speed = default_forward_speed;
         rotate_speed = default_rotate_speed;
         set_wall_material( wallDefaultMaterial );
-        set_water_material_and_Y( waterDefaultMaterial , waterDefaultY);   
+        set_water_material_and_Y( waterDefaultMaterial, longWaterDefaultMaterial, waterDefaultY);   
     }
 
     private void OnTriggerEnter(Collider c)
@@ -187,7 +185,7 @@ public class PlayerController : MonoBehaviour
                 powerUpTextBox.text = " Power : Freezing";
                 rend.material = Squee_materials[2];
                 Physics.IgnoreLayerCollision(0, 4, false);
-                set_water_material_and_Y( waterSolidMaterial, waterFreezeY );
+                set_water_material_and_Y( waterSolidMaterial, longWaterSolidMaterial, waterFreezeY );
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "SpeedUp")
             {
