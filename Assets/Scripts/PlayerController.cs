@@ -158,6 +158,8 @@ public class PlayerController : MonoBehaviour
         }
         if (c.gameObject.CompareTag("Pickup"))
         {
+            animator.SetBool("PickUp", true);
+            animator.SetTrigger("PickUp");
             FindObjectOfType<SoundManagerScript>().PlaySoundPickUp();
             c.gameObject.SetActive(false);
             particleSystemGameObject.SetActive(true);
