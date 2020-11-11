@@ -8,16 +8,6 @@ public class KillPlayer : MonoBehaviour
 
     public GameObject deathText;
 
-    void Start()
-    {
-        deathText.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider c)
     {
