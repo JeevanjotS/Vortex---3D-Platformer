@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     public Material waterDefaultMaterial;
     public Material waterSolidMaterial;
     public Color[] ParticleColors;
+    public int SlimePickUpTime;
 
     //Dictonary of format { Power_Up_Material : Character_Material}
     private Dictionary<Material, Material> Material_Dictionary = new Dictionary<Material, Material>();
@@ -154,7 +155,7 @@ public class PlayerController : MonoBehaviour
 
         if (c.gameObject.name == "RotatingParent"){
             FindObjectOfType<SoundManagerScript>().PlaySoundSlimePickUp();
-            countdown_Timer.addToTimer(20);
+            countdown_Timer.addToTimer(SlimePickUpTime);
         }
         if (c.gameObject.CompareTag("Pickup"))
         {
