@@ -36,10 +36,12 @@ public class EnemyAI : MonoBehaviour
         if (dist < 30f && aiState == AIState.Patrol) {
             aiState = AIState.Chase;
             animator.SetBool("Chase", true);
+            nma.speed = 7.0f;
         } else if (dist > 40f && aiState == AIState.Chase) {
             aiState = AIState.Patrol;
             animator.SetBool("Chase", false);
             setNextWaypoint();
+            nma.speed = 2.0f;
         }
 
         switch (aiState) {
@@ -47,11 +49,9 @@ public class EnemyAI : MonoBehaviour
                 if (nma.remainingDistance == 0 && nma.pathPending != true) {
                     setNextWaypoint();
                 }
-                animator.SetFloat("vely", nma.velocity.magnitude / nma.speed);
                 break;
             case AIState.Chase:
                 nma.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
-                animator.SetFloat("vely", nma.velocity.magnitude / nma.speed);
                 break;
             default:
                 break;
