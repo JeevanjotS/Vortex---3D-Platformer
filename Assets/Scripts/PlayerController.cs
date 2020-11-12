@@ -20,8 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject deathText;
     public Vector3 direction;
-    public float waterDefaultY;
-    public float waterFreezeY;
+    public float waterFreezeOffset;
 
     private Material collided_material;
     private Countdown_timer countdown_Timer;
@@ -49,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private GameObject[] water_game_objects;
     private GameObject particleSystemGameObject;
     private Vector3 water_pos;
+    private Boolean frozen = false;
     ParticleSystem particleSystem;
     Animator animator;
     void Start()
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
                 water_game_objects[i].GetComponent<Renderer>().material = material;
             }
             water_pos = water_game_objects[i].transform.position;
-            water_game_objects[i].transform.position = new Vector3(water_pos.x, waterY, water_pos.z);  
+            water_game_objects[i].transform.position = new Vector3(water_pos.x, water_pos.y + waterY, water_pos.z);  
         } 
     }
 
@@ -145,7 +145,15 @@ public class PlayerController : MonoBehaviour
         forward_speed = default_forward_speed;
         rotate_speed = default_rotate_speed;
         set_wall_material( wallDefaultMaterial );
-        set_water_material_and_Y( waterDefaultMaterial, longWaterDefaultMaterial, waterDefaultY);   
+        if (frozen)
+        {
+            set_water_material_and_Y( waterDefaultMaterial, longWaterDefaultMaterial, -waterFreezeOffset);  
+            frozen = false;
+        }
+        // else
+        // {
+        //     set_water_material_and_Y( waterDefaultMaterial, longWaterDefaultMaterial, 0);   
+        // }
     }
 
     private void OnTriggerEnter(Collider c)
@@ -185,7 +193,8 @@ public class PlayerController : MonoBehaviour
                 powerUpTextBox.text = " Power : Freezing";
                 rend.material = Squee_materials[2];
                 Physics.IgnoreLayerCollision(0, 4, false);
-                set_water_material_and_Y( waterSolidMaterial, longWaterSolidMaterial, waterFreezeY );
+                set_water_material_and_Y( waterSolidMaterial, longWaterSolidMaterial, waterFreezeOffset );
+                frozen = true;
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "SpeedUp")
             {

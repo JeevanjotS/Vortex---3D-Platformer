@@ -16,10 +16,11 @@ public class MeteorSpawner : MonoBehaviour
     private float velocity_magnitude;
     public int numberOfStartMeteors;
     public float updateMeteorProbability;
+    public float range;
     void Start()
     {
         for(int i=0; i<numberOfStartMeteors; i++){
-            position = new Vector3(Random.Range(-200.0f, 200.0f), Random.Range(-200.0f, 200.0f), Random.Range(-200.0f, 200.0f));
+            position = new Vector3(Random.Range(-range, range), Random.Range(-range, range), Random.Range(-range, range));
             velocity_x = Random.Range(-10.0f, 10.0f);
             velocity_y = 0;
             velocity_z = Random.Range(-10.0f, 10.0f);
