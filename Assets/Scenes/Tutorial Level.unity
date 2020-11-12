@@ -5505,7 +5505,7 @@ MonoBehaviour:
     Press
     Space to jump.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6405,7 +6405,7 @@ MonoBehaviour:
   m_text: Now use the W and S keys to move your character forward and back in the
     direction you are facing.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7089,9 +7089,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.11372549, g: 0.07058824, b: 0.49019608, a: 0.34117648}
-    m_PressedColor: {r: 0.11372549, g: 0.07058824, b: 0.49019608, a: 0.49803922}
+    m_NormalColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.7058824}
+    m_HighlightedColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.47058824}
+    m_PressedColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.23529412}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -7136,7 +7136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -12838,9 +12838,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.11372549, g: 0.07058824, b: 0.49019608, a: 0.34117648}
-    m_PressedColor: {r: 0.11372549, g: 0.07058824, b: 0.49019608, a: 0.49803922}
+    m_NormalColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.70980394}
+    m_HighlightedColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.48235294}
+    m_PressedColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.23529412}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -12885,7 +12885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15330,7 +15330,7 @@ MonoBehaviour:
 
     Find a way to reach a new powerup'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -16270,7 +16270,7 @@ MonoBehaviour:
   m_text: "Well done. \nYou now have the ability to freeze water on touch. Cross
     the water bodies as you please"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -17310,8 +17310,8 @@ MonoBehaviour:
   m_text: "Welcome to THE SQUEE CHRONICLES: \nADVENTURE ON GTS.\n \nUse the A and
     D keys to look around and turn your character to face the direction"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
-  m_sharedMaterial: {fileID: 393217217954548483, guid: 7f5e8d9787d4aeb4595f37666893209a,
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
+  m_sharedMaterial: {fileID: 2084019418191088566, guid: 2771637196310f44e8301c611663b3fd,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -17451,7 +17451,7 @@ MonoBehaviour:
   m_text: Running out of time? Pick up this radioactive Slime and 20 seconds will
     be added to your time.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -17812,7 +17812,7 @@ MonoBehaviour:
     The mothership awaits atop
     those stairs. Find the final powerup to climb them!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -29166,7 +29166,7 @@ MonoBehaviour:
     Pick up the yellow powerup to get a speedUp. Use
     this to run past the remaining monster.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -29445,7 +29445,7 @@ MonoBehaviour:
     Left Mouse Button to shoot a bullet directly in front of you. BEWARE! It's a
     very slow bullet so aiming is hard. Kill it before it kills you!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -34801,9 +34801,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.11372549, g: 0.07058824, b: 0.49019608, a: 0.34117648}
-    m_PressedColor: {r: 0.11372549, g: 0.07058824, b: 0.49019608, a: 0.49803922}
+    m_NormalColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.7019608}
+    m_HighlightedColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.4627451}
+    m_PressedColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.24313726}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -34848,7 +34848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -34934,7 +34934,7 @@ MonoBehaviour:
     Now jump over the water body, and climb the stairs to reach
     your mothership.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -40623,9 +40623,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.11372549, g: 0.07058824, b: 0.49019608, a: 0.34117648}
-    m_PressedColor: {r: 0.11372549, g: 0.07058824, b: 0.49019608, a: 0.49803922}
+    m_NormalColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.7058824}
+    m_HighlightedColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.47058824}
+    m_PressedColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.23529412}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -40670,7 +40670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -40939,7 +40939,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Great. Now speed you way through and reach the other end of the maze
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -41075,7 +41075,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f5e8d9787d4aeb4595f37666893209a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2771637196310f44e8301c611663b3fd, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -42191,9 +42191,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.11372549, g: 0.07058824, b: 0.49019608, a: 0.34117648}
-    m_PressedColor: {r: 0.11372549, g: 0.07058824, b: 0.49019608, a: 0.49803922}
+    m_NormalColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.7058824}
+    m_HighlightedColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.47058824}
+    m_PressedColor: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 0.23529412}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -42238,7 +42238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.24705882, g: 0.08627451, b: 0.08627451, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
