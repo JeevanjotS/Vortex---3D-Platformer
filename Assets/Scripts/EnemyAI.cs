@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
     // Start is called before the first frame update
     UnityEngine.AI.NavMeshAgent nma;
-    // Animator animator;
+    Animator animator;
     public GameObject[] waypoints;
     public int currWaypoint;
     public float enemySpeed = 10f;
@@ -21,9 +21,10 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         nma = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         setNextWaypoint();
         currWaypoint = -1;
+        animator.SetBool("Chase", false);
     }
 
     // Update is called once per frame
@@ -34,9 +35,13 @@ public class EnemyAI : MonoBehaviour
 
         if (dist < 30f && aiState == AIState.Patrol) {
             aiState = AIState.Chase;
+            animator.SetBool("Chase", true);
+            nma.speed = 20.0f;
         } else if (dist > 40f && aiState == AIState.Chase) {
             aiState = AIState.Patrol;
+            animator.SetBool("Chase", false);
             setNextWaypoint();
+            nma.speed = 2.0f;
         }
 
         switch (aiState) {
@@ -44,11 +49,9 @@ public class EnemyAI : MonoBehaviour
                 if (nma.remainingDistance == 0 && nma.pathPending != true) {
                     setNextWaypoint();
                 }
-                // animator.SetFloat("vely", nma.velocity.magnitude / nma.speed);
                 break;
             case AIState.Chase:
                 nma.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
-                // animator.SetFloat("vely", nma.velocity.magnitude / nma.speed);
                 break;
             default:
                 break;
