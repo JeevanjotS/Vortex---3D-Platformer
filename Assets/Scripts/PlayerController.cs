@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private Renderer rend;
     private float default_forward_speed = 0;
     private float default_rotate_speed = 0;
-    public float impulseForce = 10f;
+    public float impulseForce = 20f;
     public ForceMode force = ForceMode.Impulse;
 
     public GameObject deathText;
@@ -220,13 +220,9 @@ public class PlayerController : MonoBehaviour
     {
         if (!transform.GetChild(0).gameObject.activeSelf && (gameObject.GetComponent<Rigidbody>().velocity == new Vector3(0f, 0f, 0f)) && (gameObject.GetComponent<Rigidbody>().angularVelocity == new Vector3(0f, 0f, 0f))) {
             transform.GetChild(0).gameObject.SetActive(true);
-            Vector3 velDir = new Vector3(0, 0.5f, 1.3f);
 
             direction = transform.GetChild(1).transform.position - transform.GetChild(0).transform.position;
             direction = Vector3.Normalize(direction);
-            Vector3 temp = direction;
-            temp.y = 0.5f;
-            direction = temp;
 
             transform.GetChild(0).gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
             GlobalVar.projPos = transform.GetChild(0).transform.position;
