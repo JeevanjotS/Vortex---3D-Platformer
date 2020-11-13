@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour
         if (dist < 30f && aiState == AIState.Patrol) {
             aiState = AIState.Chase;
             animator.SetBool("Chase", true);
-            nma.speed = 7.0f;
+            nma.speed = 20.0f;
         } else if (dist > 40f && aiState == AIState.Chase) {
             aiState = AIState.Patrol;
             animator.SetBool("Chase", false);
