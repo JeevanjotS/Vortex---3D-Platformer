@@ -49,6 +49,8 @@ public class PlayerController : MonoBehaviour
     private GameObject particleSystemGameObject;
     private Vector3 water_pos;
     private Boolean frozen = false;
+
+    private PlayerJump jumpScript;
     ParticleSystem particleSystem;
     Animator animator;
     void Start()
@@ -79,7 +81,8 @@ public class PlayerController : MonoBehaviour
         distanceToGround = col.bounds.extents.y;
         particleSystemGameObject = this.transform.GetChild(2).GetChild(1).gameObject;
         particleSystem = particleSystemGameObject.GetComponent<ParticleSystem>();
-        
+        jumpScript = this.GetComponent<PlayerJump>();
+        print(jumpScript.jumpActive);
     }
 
     private void set_wall_material(Material material)
@@ -134,7 +137,8 @@ public class PlayerController : MonoBehaviour
     //Function to set everything to default
     void DefaultPower()
     {
-        gameObject.GetComponent<PlayerJump>().enabled = false;
+        // gameObject.GetComponent<PlayerJump>().enabled = false;
+        jumpScript.jumpActive = false;
         gameObject.layer = LayerMask.NameToLayer("Default");
         
         // 0 - Default Layer
@@ -185,7 +189,8 @@ public class PlayerController : MonoBehaviour
                 particleSystem.startColor = ParticleColors[1];
                 powerUpTextBox.text = " Power : Jumping";
                 rend.material = Squee_materials[0];
-                gameObject.GetComponent<PlayerJump>().enabled = true;
+                // gameObject.GetComponent<PlayerJump>().enabled = true;
+                jumpScript.jumpActive = true;
             }
             else if(collided_material.name.Replace(" (Instance)", "") == "Freezing")
             {
