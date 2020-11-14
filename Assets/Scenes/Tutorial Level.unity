@@ -11539,7 +11539,7 @@ MonoBehaviour:
   - {fileID: 693347659}
   - {fileID: 636815318}
   currWaypoint: -1
-  enemySpeed: 10
+  enemySpeed: 2
   aiState: 0
 --- !u!195 &1892776123
 NavMeshAgent:
