@@ -663,7 +663,7 @@ PrefabInstance:
     - target: {fileID: 6405056838076568914, guid: c839c09e12f3ee349b0a74086e923a26,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.838001
+      value: 24.2
       objectReference: {fileID: 0}
     - target: {fileID: 6405056838076568914, guid: c839c09e12f3ee349b0a74086e923a26,
         type: 3}
@@ -2042,7 +2042,7 @@ PrefabInstance:
     - target: {fileID: 1798943780038658031, guid: bee42437b43b945439fb1481c428d2ba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.838001
+      value: 25.71
       objectReference: {fileID: 0}
     - target: {fileID: 1798943780038658031, guid: bee42437b43b945439fb1481c428d2ba,
         type: 3}
@@ -3959,6 +3959,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PushCube (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486256775951090974, guid: 3f3cd87f7eb4be14c8559f195a2379ab,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1486256775951090975, guid: 3f3cd87f7eb4be14c8559f195a2379ab,
         type: 3}
@@ -6017,6 +6022,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PushCube
       objectReference: {fileID: 0}
+    - target: {fileID: 1486256775951090974, guid: 3f3cd87f7eb4be14c8559f195a2379ab,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1486256775951090975, guid: 3f3cd87f7eb4be14c8559f195a2379ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6360,6 +6370,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PushCube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486256775951090974, guid: 3f3cd87f7eb4be14c8559f195a2379ab,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1486256775951090975, guid: 3f3cd87f7eb4be14c8559f195a2379ab,
         type: 3}
@@ -8231,7 +8246,7 @@ PrefabInstance:
     - target: {fileID: 5548056208411434509, guid: 24db98d241840cd40876e782496e8b21,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.838001
+      value: 26.1
       objectReference: {fileID: 0}
     - target: {fileID: 5548056208411434509, guid: 24db98d241840cd40876e782496e8b21,
         type: 3}
@@ -9125,12 +9140,12 @@ PrefabInstance:
     - target: {fileID: 7008865468282686238, guid: aaf879d71dd908746a285835ccd42397,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.838001
+      value: 24.76
       objectReference: {fileID: 0}
     - target: {fileID: 7008865468282686238, guid: aaf879d71dd908746a285835ccd42397,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -380.5241
+      value: -379.41
       objectReference: {fileID: 0}
     - target: {fileID: 7008865468282686238, guid: aaf879d71dd908746a285835ccd42397,
         type: 3}
@@ -9421,6 +9436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PushCube (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486256775951090974, guid: 3f3cd87f7eb4be14c8559f195a2379ab,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1486256775951090975, guid: 3f3cd87f7eb4be14c8559f195a2379ab,
         type: 3}
