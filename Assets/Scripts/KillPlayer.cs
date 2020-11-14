@@ -11,7 +11,15 @@ public class KillPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider c)
     {
-        FindObjectOfType<SoundManagerScript>().PlayFalling();
-        deathText.SetActive(true);
+        if (c.gameObject.name == "Player")
+        {
+            FindObjectOfType<SoundManagerScript>().PlayFalling();
+            deathText.SetActive(true);
+        }
+
+        if(c.gameObject.name== "Projectile"){
+            c.transform.position = GlobalVar.projPos;
+            c.gameObject.SetActive(false);
+        }
     }
 }

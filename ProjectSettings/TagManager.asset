@@ -10,6 +10,7 @@ TagManager:
   - Projectile
   - Phasable
   - Water
+  - Death
   layers:
   - Default
   - TransparentFX
