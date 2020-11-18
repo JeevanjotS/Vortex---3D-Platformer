@@ -7,7 +7,7 @@ using System.Threading;
 
 public class DeathScript : MonoBehaviour
 {
-
+    private int currentSceneIndex;
     void Update()
     {
         if (Keyboard.current.yKey.wasPressedThisFrame)
@@ -18,7 +18,9 @@ public class DeathScript : MonoBehaviour
         else if (Keyboard.current.nKey.wasPressedThisFrame)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt("SavedScene", currentSceneIndex);
+            SceneManager.LoadScene("Main Menu");
         }
     }
 }

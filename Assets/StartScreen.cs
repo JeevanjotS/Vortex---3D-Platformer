@@ -10,7 +10,7 @@ public class StartScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.anyKey.wasPressedThisFrame)
+        if (Keyboard.current.enterKey.wasPressedThisFrame)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

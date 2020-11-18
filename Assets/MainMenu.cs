@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private int sceneToContinue;
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -15,5 +16,16 @@ public class MainMenu : MonoBehaviour
     {
         UnityEngine.Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void ContinueGame()
+    {
+        sceneToContinue = PlayerPrefs.GetInt("SavedScene");
+        if (sceneToContinue != 0)
+        {
+            SceneManager.LoadScene(sceneToContinue);
+        }
+        else
+            return;
     }
 }
