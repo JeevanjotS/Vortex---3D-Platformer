@@ -15,6 +15,7 @@ public class MeteorVelocity : MonoBehaviour
 
     private void OnTriggerEnter(Collider c)
     {
+        print("Entered Meteors");
         this.gameObject.SetActive(false);
     }
 }
