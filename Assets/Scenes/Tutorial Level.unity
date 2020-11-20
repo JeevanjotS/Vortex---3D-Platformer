@@ -12698,6 +12698,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1076079174}
     m_Modifications:
+    - target: {fileID: 2702956128532305366, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702956128532305366, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702956128532305366, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702956128532305366, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702956128532305366, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6034920010056532706, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
       propertyPath: speed.x

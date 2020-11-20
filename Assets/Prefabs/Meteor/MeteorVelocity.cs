@@ -13,7 +13,7 @@ public class MeteorVelocity : MonoBehaviour
         transform.Translate(speed * Time.deltaTime ); 
     }
 
-    private void OnTriggerEnter(Collider c)
+    private void OnCollisionEnter(Collision c)
     {
         print("Entered Meteors");
         this.gameObject.SetActive(false);

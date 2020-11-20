@@ -82,7 +82,6 @@ public class PlayerController : MonoBehaviour
         particleSystemGameObject = this.transform.GetChild(2).GetChild(1).gameObject;
         particleSystem = particleSystemGameObject.GetComponent<ParticleSystem>();
         jumpScript = this.GetComponent<PlayerJump>();
-        print(jumpScript.jumpActive);
     }
 
     private void set_wall_material(Material material)
