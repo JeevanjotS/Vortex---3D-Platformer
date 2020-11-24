@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -444,6 +444,11 @@ PrefabInstance:
     - target: {fileID: 6034920010056532706, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
       propertyPath: speed.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6034920010056532706, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
+        type: 3}
+      propertyPath: speed.z
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6034920010056532707, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
@@ -454,17 +459,17 @@ PrefabInstance:
     - target: {fileID: 6034920010056738785, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5999985
+      value: -78.1
       objectReference: {fileID: 0}
     - target: {fileID: 6034920010056738785, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20
+      value: -31.2
       objectReference: {fileID: 0}
     - target: {fileID: 6034920010056738785, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -288.65
+      value: -326.2
       objectReference: {fileID: 0}
     - target: {fileID: 6034920010056738785, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
@@ -3232,7 +3237,7 @@ PrefabInstance:
     - target: {fileID: 6034920010056532706, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
       propertyPath: speed.x
-      value: 50
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 6034920010056532706, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
@@ -3252,12 +3257,12 @@ PrefabInstance:
     - target: {fileID: 6034920010056738785, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.4
+      value: 13.54
       objectReference: {fileID: 0}
     - target: {fileID: 6034920010056738785, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -272.9
+      value: -279.7
       objectReference: {fileID: 0}
     - target: {fileID: 6034920010056738785, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
         type: 3}
@@ -7484,7 +7489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076079173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -16, z: -144}
+  m_LocalPosition: {x: 57.8, y: 26.4, z: -92.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2107858717}
@@ -7508,8 +7513,9 @@ MonoBehaviour:
   meteor_prefab: {fileID: 6034920010056532707, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
     type: 3}
   numberOfStartMeteors: 0
-  updateMeteorProbability: 0.025
-  range: 1000
+  updateMeteorProbability: 0.005
+  range: 400
+  y_range: 20
 --- !u!1 &1077145594
 GameObject:
   m_ObjectHideFlags: 0

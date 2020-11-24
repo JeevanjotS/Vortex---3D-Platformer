@@ -8335,8 +8335,9 @@ MonoBehaviour:
   meteor_prefab: {fileID: 6034920010056532707, guid: cd369a1c8f766dd4e9ef08210e6dc2ec,
     type: 3}
   numberOfStartMeteors: 0
-  updateMeteorProbability: 0.01
+  updateMeteorProbability: 0.005
   range: 200
+  y_range: 20
 --- !u!1 &1097144904
 GameObject:
   m_ObjectHideFlags: 0
