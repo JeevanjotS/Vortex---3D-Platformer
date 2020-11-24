@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Coll.cs" />
      <Compile Include="Assets\DeathScript.cs" />
+     <Compile Include="Assets\EnemyAnimationAudio.cs" />
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Materials\Starfield Skybox\Demo\Script\LookCamera.cs" />
      <Compile Include="Assets\NextLevel.cs" />

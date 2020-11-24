@@ -31,7 +31,6 @@ public class ProjectileScript : MonoBehaviour
         if (c.gameObject.tag == "Enemy") {
             FindObjectOfType<SoundManagerScript>().PlayEnemyDeath();
             Destroy(c.gameObject);
-            print("Hit");
         }
     }
 }
