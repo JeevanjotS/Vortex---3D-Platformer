@@ -8,6 +8,10 @@ public class EnemyAnimationAudio : MonoBehaviour
     public AudioClip audioClip;
     public AudioSource audioSource;
 
+    public static float volume = 1f;
+
+    // public static float volume = 1f;
+
     void Start()
     {
         
@@ -16,6 +20,15 @@ public class EnemyAnimationAudio : MonoBehaviour
     // Update is called once per frame
     void playSpike()
     {
-        audioSource.PlayOneShot(audioClip);
+        audioSource.PlayOneShot(audioClip, volume);
     }
+
+    public void OnValueChanged(float newValue)
+    {
+        volume = newValue;
+    }
+    // public static void setVolume(float vol)
+    // {
+    //     volume = vol;
+    // }
 }
