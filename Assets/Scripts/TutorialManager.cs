@@ -27,77 +27,85 @@ public class TutorialManager : MonoBehaviour
                 popUps[i].SetActive(false);
             }
         }
-        if(popUpIndex == 0)
+
+        if (popUpIndex == 0)
+        {
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                popUpIndex += 1;
+            }
+        }
+        else if(popUpIndex == 1)
         {
             if (Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.dKey.wasPressedThisFrame)
             {
                 popUpIndex += 1;
             }
         }
-        else if(popUpIndex==1)
+        else if(popUpIndex==2)
         {
             if (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.sKey.wasPressedThisFrame)
             {
                 popUpIndex += 1;
             }
         }
-        else if(popUpIndex == 2)
+        else if(popUpIndex == 3)
         {
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
                 popUpIndex += 1;
             }    
         }
-        else if (popUpIndex == 3)
+        else if (popUpIndex == 4)
         {
             if (!speedUp.activeSelf)
             {
                 popUpIndex += 1;
             }
         }
-        else if (popUpIndex == 4)
-        {
-            if (Vector3.Distance(player.transform.position, phasePower.transform.position) <= 50)
-            {
-                popUpIndex += 1;
-            }
-        }
         else if (popUpIndex == 5)
         {
-            if (!slime.activeSelf)
+            if (Vector3.Distance(player.transform.position, phasePower.transform.position) <= 90)
             {
                 popUpIndex += 1;
             }
         }
         else if (popUpIndex == 6)
         {
-            if (!phasePower.activeSelf)
+            if (!slime.activeSelf)
             {
                 popUpIndex += 1;
             }
         }
         else if (popUpIndex == 7)
         {
-            if (!freeze.activeSelf)
+            if (!phasePower.activeSelf)
             {
                 popUpIndex += 1;
             }
         }
         else if (popUpIndex == 8)
         {
-            if (Vector3.Distance(player.transform.position, freeze.transform.position) > 50)
+            if (!freeze.activeSelf)
             {
                 popUpIndex += 1;
             }
         }
         else if (popUpIndex == 9)
         {
-            if (!jumpPower.activeSelf)
+            if (Vector3.Distance(player.transform.position, freeze.transform.position) > 50)
             {
                 popUpIndex += 1;
             }
         }
         else if (popUpIndex == 10)
+        {
+            if (!jumpPower.activeSelf)
+            {
+                popUpIndex += 1;
+            }
+        }
+        else if (popUpIndex == 11)
         {
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
