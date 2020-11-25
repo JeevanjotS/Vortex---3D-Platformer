@@ -6663,7 +6663,7 @@ PrefabInstance:
     - target: {fileID: 7416925365795247081, guid: 21e3f7185c22a9c4092a6905b8e6321f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -7.7
       objectReference: {fileID: 0}
     - target: {fileID: 7416925365795247081, guid: 21e3f7185c22a9c4092a6905b8e6321f,
         type: 3}
@@ -6698,7 +6698,7 @@ PrefabInstance:
     - target: {fileID: 7416925365851511878, guid: 21e3f7185c22a9c4092a6905b8e6321f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.9
+      value: -16.1
       objectReference: {fileID: 0}
     - target: {fileID: 7416925365851511878, guid: 21e3f7185c22a9c4092a6905b8e6321f,
         type: 3}
@@ -11272,7 +11272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 160, y: -28}
+  m_AnchoredPosition: {x: 200, y: -28}
   m_SizeDelta: {x: 110, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710549381
@@ -11289,6 +11289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeStart: 60
   textBox: {fileID: 1710549382}
+  criticalTimerColor: {r: 0, g: 0, b: 0, a: 0}
+  anim: {fileID: 0}
   deathText: {fileID: 1775796072}
 --- !u!114 &1710549382
 MonoBehaviour:
@@ -13138,6 +13140,7 @@ GameObject:
   - component: {fileID: 1966092647}
   - component: {fileID: 1966092646}
   - component: {fileID: 1966092648}
+  - component: {fileID: 1966092649}
   m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
@@ -13161,7 +13164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 69, y: -28}
+  m_AnchoredPosition: {x: 90, y: -28}
   m_SizeDelta: {x: 110, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966092646
@@ -13219,7 +13222,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeStart: 120
   textBox: {fileID: 1966092646}
+  criticalTimerColor: {r: 0.9339623, g: 0.066082224, b: 0.066082224, a: 1}
+  anim: {fileID: 0}
   deathText: {fileID: 1775796072}
+--- !u!95 &1966092649
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966092644}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2cbcece81a341e246bafb7ab72607153, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1974161217
 GameObject:
   m_ObjectHideFlags: 0
