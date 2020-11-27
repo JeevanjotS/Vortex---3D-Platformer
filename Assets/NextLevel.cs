@@ -15,5 +15,6 @@ public class NextLevel : MonoBehaviour
     public void Proceed()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        ScoreScript.scoreValue = 0;
     }
 }
