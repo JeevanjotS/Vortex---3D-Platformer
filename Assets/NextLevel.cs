@@ -22,5 +22,6 @@ public class NextLevel : MonoBehaviour
         PlayerPrefs.SetFloat("Background_music_volume", Background_music_slider.value);
         PlayerPrefs.SetFloat("SFX_volume", SFX_slider.value);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        ScoreScript.scoreValue = 0;
     }
 }

@@ -14,6 +14,7 @@ public class DeathScript : MonoBehaviour
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            ScoreScript.scoreValue = 0;
         }
         else if (Keyboard.current.nKey.wasPressedThisFrame)
         {
@@ -21,6 +22,7 @@ public class DeathScript : MonoBehaviour
             currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             PlayerPrefs.SetInt("SavedScene", currentSceneIndex);
             SceneManager.LoadScene("Main Menu");
+            ScoreScript.scoreValue = 0;
         }
     }
 }
