@@ -42,6 +42,15 @@ public class PlayerController : MonoBehaviour
     public Color[] ParticleColors;
     public int SlimePickUpTime;
 
+    //variables for shooting and logic
+    private float moveForce = 5f;
+    private float shootRate = 0.05f;
+    private float shootForce = 8000f;
+    private float shootLimiter = 0.5f;
+    private Rigidbody rbody;
+    public GameObject projectile;
+    public Transform shootStart;
+
     //Dictonary of format { Power_Up_Material : Character_Material}
     private Dictionary<Material, Material> Material_Dictionary = new Dictionary<Material, Material>();
     private GameObject[] phasable_walls;
@@ -217,11 +226,29 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        
+
     }
 
-    void OnFire()
-    {
+   
+    
+    
+    void OnFire() {
+        rbody = GetComponent<Rigidbody>();
+        Vector3 currVel = rbody.velocity;
+        rbody.velocity = new Vector3(currVel.x, 0 , currVel.z);
+        
+        if (Time.time > shootLimiter) {
+            GameObject go = (GameObject) Instantiate(projectile, shootStart.position, shootStart.rotation);
+            go.GetComponent<Rigidbody>().AddForce(shootStart.forward * shootForce);
+            FindObjectOfType<SoundManagerScript>().PlaySoundFire();
+            shootLimiter = Time.time + shootRate;
+        
+        }
+        
+        
+        /*
+        OLD PROJECTILE FIRING METHOD
+
         if (!transform.GetChild(0).gameObject.activeSelf && (gameObject.GetComponent<Rigidbody>().velocity == new Vector3(0f, 0f, 0f)) && (gameObject.GetComponent<Rigidbody>().angularVelocity == new Vector3(0f, 0f, 0f))) {
             transform.GetChild(0).gameObject.SetActive(true);
 
@@ -234,6 +261,8 @@ public class PlayerController : MonoBehaviour
             transform.GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(direction * impulseForce, force);
             FindObjectOfType<SoundManagerScript>().PlaySoundFire();
         }
+        */
     }
+    
 }
 
