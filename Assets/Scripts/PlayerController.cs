@@ -224,6 +224,12 @@ public class PlayerController : MonoBehaviour
                 deathText.SetActive(true);
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        
+    }
+
     void Update()
     {
 

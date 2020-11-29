@@ -63,6 +63,7 @@
      <Compile Include="Assets\Materials\Starfield Skybox\Demo\Script\LookCamera.cs" />
      <Compile Include="Assets\NextLevel.cs" />
      <Compile Include="Assets\PauseMenu.cs" />
+     <Compile Include="Assets\PlayRockSound.cs" />
      <Compile Include="Assets\Prefabs\Meteor\MeteorSpawner.cs" />
      <Compile Include="Assets\Prefabs\Meteor\MeteorVelocity.cs" />
      <Compile Include="Assets\Prefabs\PowerUp\Scripts\CustomizablePowerUp.cs" />
