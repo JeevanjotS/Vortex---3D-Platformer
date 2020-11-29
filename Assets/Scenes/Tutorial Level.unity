@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13136,7 +13136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -285.1, y: 172.30002}
+  m_AnchoredPosition: {x: -50, y: 233}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1797279441
@@ -13171,9 +13171,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c7a0396ae00edde45b9e9225def2c943, type: 3}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -15530,7 +15530,7 @@ PrefabInstance:
     - target: {fileID: 371791889399846538, guid: 41b4362694c0e4046bca4dfce3257682,
         type: 3}
       propertyPath: jumpActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 371791889399846541, guid: 41b4362694c0e4046bca4dfce3257682,
         type: 3}
@@ -16026,6 +16026,12 @@ PrefabInstance:
       propertyPath: timeStart
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 5155919872971871753, guid: 983f9d2c5a7e8a24a9d7d8b937b5f7af,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c7a0396ae00edde45b9e9225def2c943,
+        type: 3}
     - target: {fileID: 5155919872971871754, guid: 983f9d2c5a7e8a24a9d7d8b937b5f7af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16744,6 +16750,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9138823471627022435, guid: 0926c059ddab7294d88b7ba38e9144c2,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c7a0396ae00edde45b9e9225def2c943,
+        type: 3}
     - target: {fileID: 9138823471627022438, guid: 0926c059ddab7294d88b7ba38e9144c2,
         type: 3}
       propertyPath: m_Name
