@@ -661,61 +661,61 @@
  <HintPath>D:/Fall 2020/Video Game Design/Unity/2019.4.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Shaders">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InputSystem">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Editor">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Latest/Vortex---3D-Platformer/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Fall 2020/Video Game Design/Sem Project/Code/Newest/Vortex---3D-Platformer/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
