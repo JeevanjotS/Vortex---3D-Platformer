@@ -28,84 +28,84 @@ public class TutorialManager : MonoBehaviour
             }
         }
 
-        if (popUpIndex == 0)
+        if (popUpIndex <= 2)
         {
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 popUpIndex += 1;
             }
         }
-        else if(popUpIndex == 1)
+        else if(popUpIndex == 3)
         {
             if (Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.dKey.wasPressedThisFrame)
             {
                 popUpIndex += 1;
             }
         }
-        else if(popUpIndex==2)
+        else if(popUpIndex==4)
         {
             if (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.sKey.wasPressedThisFrame)
             {
                 popUpIndex += 1;
             }
         }
-        else if(popUpIndex == 3)
+        else if(popUpIndex == 5)
         {
-            if (Mouse.current.leftButton.wasPressedThisFrame)
+            if (Keyboard.current.fKey.wasPressedThisFrame)
             {
                 popUpIndex += 1;
             }    
         }
-        else if (popUpIndex == 4)
+        else if (popUpIndex == 6)
         {
             if (!speedUp.activeSelf)
             {
                 popUpIndex += 1;
             }
         }
-        else if (popUpIndex == 5)
+        else if (popUpIndex == 7)
         {
             if (Vector3.Distance(player.transform.position, phasePower.transform.position) <= 90)
             {
                 popUpIndex += 1;
             }
         }
-        else if (popUpIndex == 6)
+        else if (popUpIndex == 8)
         {
             if (!slime.activeSelf)
             {
                 popUpIndex += 1;
             }
         }
-        else if (popUpIndex == 7)
+        else if (popUpIndex == 9)
         {
             if (!phasePower.activeSelf)
             {
                 popUpIndex += 1;
             }
         }
-        else if (popUpIndex == 8)
+        else if (popUpIndex == 10)
         {
             if (!freeze.activeSelf)
             {
                 popUpIndex += 1;
             }
         }
-        else if (popUpIndex == 9)
+        else if (popUpIndex == 11)
         {
             if (Vector3.Distance(player.transform.position, freeze.transform.position) > 50)
             {
                 popUpIndex += 1;
             }
         }
-        else if (popUpIndex == 10)
+        else if (popUpIndex == 12)
         {
             if (!jumpPower.activeSelf)
             {
                 popUpIndex += 1;
             }
         }
-        else if (popUpIndex == 11)
+        else if (popUpIndex == 13)
         {
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
