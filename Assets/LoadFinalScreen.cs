@@ -23,7 +23,8 @@ public class LoadFinalScreen : MonoBehaviour
         {
             FindObjectOfType<SoundManagerScript>().PlayEndLevel();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            ScoreScript.scoreValue = 0;
+            // print(ScoreScript.scoreValue + Countdown_timer.currtime);
+            PlayerPrefs.SetInt("score", (int) (ScoreScript.scoreValue + Countdown_timer.currtime) );
         }
     }
 }

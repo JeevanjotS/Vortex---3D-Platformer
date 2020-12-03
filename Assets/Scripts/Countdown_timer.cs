@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Countdown_timer : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static float currtime;
     public float timeStart;
     public Text textBox;
     public Color criticalTimerColor;
@@ -14,11 +15,13 @@ public class Countdown_timer : MonoBehaviour
     public GameObject deathText;
     void Start()
     {
+        currtime = timeStart;
         anim = GetComponent<Animator>();
     }
 
     public void addToTimer(float value){
         timeStart+=value;
+        currtime+=value;
     }
 
     // Update is called once per frame
@@ -40,7 +43,13 @@ public class Countdown_timer : MonoBehaviour
                 anim.SetBool("IsLowTime", false);
             }
             timeStart -=Time.deltaTime;
+            currtime -= Time.deltaTime;
             textBox.text = "Time : " + timeStart.ToString("F2");
         }
+    }
+
+    public void returnTime()
+    {
+
     }
 }
