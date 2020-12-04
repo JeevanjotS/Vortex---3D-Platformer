@@ -78,6 +78,7 @@
      <Compile Include="Assets\Prefabs\Slime_Prefab\CollectableSlime.cs" />
      <Compile Include="Assets\Prefabs\Slime_Prefab\StartAnimation.cs" />
      <Compile Include="Assets\Prefabs\amusedART\SlimeRabbit\Sc_AniTest.cs" />
+     <Compile Include="Assets\QuitEndScreen.cs" />
      <Compile Include="Assets\RenderText.cs" />
      <Compile Include="Assets\Scripts\AnimationAudio.cs" />
      <Compile Include="Assets\Scripts\CallSpaceship.cs" />
