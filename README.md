@@ -1,13 +1,195 @@
 # Vortex---3D-Platformer
-A 3D platformer developed in Unity
+A 3D puzzle platformer developed in Unity by:
+DJ Yu - dyu63@gatech.edu - dyu63
+Kacey Chung - kchung46@gatech.edu - kchung46
+Jeevanjot Singh - jsingh306@gatech.edu - jsingh306
+Kevin George - kgeorge37@gatech.edu - kgeorge37
 
-DJ Yu, Kacey Chung, Jeevanjot Singh, Kevin George
+
+No installation requirements/procedures.
+
 
 How to Play:
 
     The player can start a new game through the start menu UI. The player can control the character via WASD or the arrow keys. The player should move around to pick up various power-ups that will allow the player to interact with the world in different ways (power up will change the character color and the UI will tell the player which power up they currently have). UV slime collectables can also be picked up by the player to increase the time left on the timer. The player can also click the left mouse button to fire a projectile that will destory enemies. The goal of the game is to traverse through the level in order to find a way to get to the mothership plane (the end of the level) without dying to enemies or letting the timer run out.
 
-For technology requirements, I could not find a comprehensive list anywhere on Canvas, so I used the Video Game Design Rubric as a basis. Parts I felt were a "technology requirement" are listed below.
+
+No known deficiencies or bugs.
+
+
+External resources used:
+    -Player Character Asset: Downloaded character asset but made all the controls, animation except ear flopping and made the blend tree as well. 
+
+    -Asteroids: Downloaded the colorful asteroids used in the game for aesthetics from the unity asset store.
+
+    -Meteors: The asset is from the asteroid pack from the asset store, but the particle system, spawn logic and velocity were created by Kevin George. 
+
+    -Enemy Asset: The asset and animation are from the RPG Monster Duo PBR Polyart by Dungeon Mason from the asset store, but the enemy AI logic was done by DJ Yu and Kacey Chung, and the enemy animation blending by DJ Yu, Kacey Chung, and Kevin George.
+
+    -Planet/Supernovas: Vast Outer Space by Prodigious Creations was downloaded for free from the Unity Asset Store. These prefabs of planets and supernovas were placed around the level for aesthetic purposes.
+
+    -PickUps Particle System: Downloaded the particle system used with the PickUps but changed the materials, various parameters. 
+
+
+Open the following scenes:
+    -Start Screen
+    -Intro
+    -Tutorial Level
+    -Main Menu
+    -Level 2
+    -End Screen
+
+Manifest:
+    Kevin George -
+        Contributions: 
+            Player Character controls
+            Player Character animations
+            All sounds and music in the game
+            Meteors 
+            Floor rocks
+            Level 2 Design 
+            Level 2 implementation 
+            Player Character particle system
+            End Screen implementation 
+            Freezing Power up
+            Speed Power up
+            Jumping Mechanic
+            Power ups particle system 
+            Tutorial Level Aesthetics 
+            Level 2 Aesthetics
+            Volume Sliders 
+            UV Slime pick up
+            Water / Ice 
+            Countdown Timer  
+            Heads Up Display - Timer and Power Up Text 
+            Enemy Animation Blend Tree
+            Death Plane and death logic
+            Materials for floor, walls, character (only tint/color), water 
+            Shader Graph for water
+            Tutorial Level polish (Gap fixes for floors and walls)
+            Sound editing with Audacity. 
+            Enemy Collider bug fix
+            Skybox
+            Tutorial Level edge walls
+            Camera rotation 
+
+        Code Contributions: 
+            AnimationAudio.cs
+            CameraController.cs
+            Countdown_timer.cs
+            JustLoadSounds.cs
+            KillPlayer.cs
+            OldPlayerController.cs
+            PlayerController.cs
+            PlayerJump.cs
+            PowerRotator.cs
+            SoundManagerScript.cs
+            Timer.cs
+            TractorBeamCollider.cs
+            ChangeSliderValues.cs
+            CubeSound.cs
+            DeathScript.cs
+            DispalyScore.cs
+            EnemyAnimationAudio.cs
+            LoadFinalScreen.cs
+            NextLevel.cs
+            PlayRockSound.cs
+            QuitEndScreen.cs
+            TextureFix.cs
+
+
+    Dongjoo Yu - 
+        Contributions: 
+            Floor rock placement for both levels
+            Tutorial Level implementation (Fixed stair placement, fixed tiling, added pushable box, and added enemies)
+            Tutorial Level aesthetics 
+            Level 2 implementation (Fixed stair placement, tiling, pushable box sizes, and enemy placement)
+            Level 2 aesthetics
+            Heads Up Display - Score Text 
+            Created basic shooting mechanic
+            Enemy Animation Blend Tree logic
+            Enemy AI
+            Enemy animations
+            Projectile creation and instantiation 
+            Pushable boxes
+            Developed backstory/theme
+
+        Code Contributions:
+            EnemyAI.cs
+            GlobalVar.cs
+            ProjectileScript.cs
+            ScoreScript.cs
+            VelocityReporter.cs
+            DeathScript.cs
+            NextLevel.cs
+            PauseMenu.cs
+            PlayerController.cs
+
+
+    Jeevanjot Singh - 
+        Contributions: 
+            Solo implementation of the whole game for team project pitch
+            Implemented prefabs for all the pickups
+            Implemented animated prefab for mothership
+            Created the whole playthrough tutorial
+            Main menu design and implementation
+            Start screen design and implementation
+            Pause menu design and implementation
+            Introduction and backstory page implementation
+            Implemented jump powerup
+            Implemented phase powerup
+            Implemented freeze powerup
+            Redesigned tutorial level aesthetically
+            Redesigned Level 2 aesthetically
+            Added timer blinking red when low on time
+            Implemented basic player controls like movement(later redesigned) and jump
+
+        Code Contributions:
+            StartScreen.cs
+            PauseMenu.cs
+            MainMenu.cs
+            NextLevel.cs
+            DeathScript.cs
+            TutorialManager.cs
+            TractorBeamCollider.cs
+            PowerRotator.cs
+            PlayerJump.cs
+            PlayerController.cs
+            Countdown_timer.cs
+            CallSpaceship.cs
+
+
+    Kacey Chung - 
+        Contributions: 
+            Tutorial Level Design
+            Tutorial Level Implementation
+            Tutorial Aesthetics
+            Level 2 Design 
+            Level 2 Implementation (enemy, powerups, slime, boxes, asteroids)
+            Level 2 Aesthetics
+            End Screen Artwork
+            Created basic shooting/projectile mechanic
+            Finished and fixed shooting/projectile mechanic
+            Enemy Animation Blend Tree logic
+            Enemy AI
+            Enemy animations
+            Guiding Arrow
+            Pushable boxes
+            Asteroid Animations (later removed)
+            Environment Materials
+            Developed backstory/theme
+
+        Code Contributions:
+        EnemyAI.cs
+        GlobalVar.cs
+        ProjectileScript.cs
+        VelocityReporter.cs
+        PlayerController.cs
+        ProjectileScript.cs
+        arrowScript.cs
+
+
+For technology requirements, I could not find a comprehensive list anywhere on Canvas, so I used the Video Game Design Rubric as a basis. Parts I felt were a "technology requirement" are listed below (From Alpha Demo).
 
 Technology Requirements:
 
